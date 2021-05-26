@@ -3,7 +3,8 @@
 a:link, a:visited, a:hover, a:focus{text-decoration: none; color: #6d509e;}
 
 .navbar-brand {
-	background: url("../../images/logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 80%;
 }
 
 /* Home Slider */

@@ -10,7 +10,9 @@
 /*************************
 *******Typography******
 **************************/
-
+p{
+	text-align: justify;
+}
 html, body {
 	font-family: 'Open Sans', sans-serif;
 	background:#ffffff;
@@ -23,6 +25,15 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-stroke: rgba(255,255,255,0.01) 0.1px;
 	-webkit-text-stroke-width: 0.1px;
+}
+
+#citation{
+	padding: 2%;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 23px;
+	color: #6D509E;
+	font-weight: bold;
+	text-decoration: -moz-cellhighlighttext;
 }
 
 a:visited, a:focus{color: none;}
@@ -558,7 +569,7 @@ cite {
 }	
 
 .wrapper-why-us  {
-	padding: 40px 0;
+	padding: 10px 0;
 }	
 
 .about-us h2 {

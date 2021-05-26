@@ -238,8 +238,11 @@ cite {
 }
 	
 .overlay {
-	background: url(../images/pattern.png);
-}	
+	background: url(../images/bandeau_MDV2.jpg);
+}
+.overlay2 {
+	background: url(../images/partners-bg.jpg);
+}
 
 /*************************
 ********Home CSS**********

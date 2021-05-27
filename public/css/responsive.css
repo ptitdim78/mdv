@@ -1,8 +1,10 @@
 	/* Small desktop */
-	@media (min-width: 980px) and (max-width: 1920px) {
+	@media (min-width: 980px) and (max-width: 3000px) {
 		#navigation{
 			display: flex;
 			justify-content: center;
+			background-color: rgba(109,80,158,0.2777485994397759);
+
 		}
 		/* Works */
 		.myport .portfolio ,

@@ -24,7 +24,16 @@
 
 	/* Portrait tablet to landscape and desktop */
 	@media (min-width: 768px) and (max-width: 979px) {
-
+		#partenaires{
+			display: flex;
+			justify-content: center;
+			width: 105%;
+		}
+		.photoPartenaires{
+			display: flex;
+			width: 90%;
+			justify-content: center;
+		}
 		/* Home Slider */
 		#home-slider .caption h1 {
 			font-size: 60px;
@@ -103,8 +112,8 @@
 			float: left;
 			margin: 0 auto;
 			width: 50%;
-		}			
-		
+		}
+
 		/* Price */
 		.wrapper-pricing .col-md-3{
 			margin: 0 auto 20px;
@@ -141,12 +150,24 @@
 		.contact_form {
 			width: 90%;
 		}
+
+
 	}
 	
 	
 	/* Landscape phone to portrait tablet */
 	@media (max-width: 767px) {
-	
+		#partenaires{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+		.photoPartenaires{
+			display: flex;
+			width: 85%;
+			justify-content: center;
+		}
+
 		#home-slider .caption h1 {
 			font-size: 40px;
 		}

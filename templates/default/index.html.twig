@@ -275,9 +275,9 @@
         </div>
 
         <!-- Skills -->
-        <div class="skills parallax">
-            <div class="overlay">
-                <div class="wrapper-block-skills">
+{#        <div class="skills parallax">#}
+{#            <div class="overlay">#}
+{#                <div class="wrapper-block-skills">#}
                     <!-- Block Title -->
                     <div class="element-title">
                         <div class="row">
@@ -289,47 +289,92 @@
                         </div>
                     </div>
                     <!-- End Block Title -->
-                    <div class="row">
-                        <div class="container">
-                            <div class="wrapper-count">
-                                <div class="col-lg-3 col-md-3">
-                                    <!-- SKILL ONE -->
-                                    <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
-{#                                        <input type="text" class="knob" value="86">#}
-{#                                        <h4>Web Design</h4>#}
-                                        <img id="realisation" src="{{ 'https://via.placeholder.com/200x200/FFFF00/000000' }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <!-- SKILL TWO -->
-                                    <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="500ms">
-{#                                        <input type="text" class="knob" value="93">#}
-{#                                        <h4>Html5</h4>#}
-                                        <img id="realisation" src="{{ 'https://via.placeholder.com/200x200/FFFF00/000000' }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <!-- SKILL THREE -->
-                                    <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
-{#                                        <input type="text" class="knob" value="88">#}
-{#                                        <h4>JQuery</h4>#}
-                                        <img id="realisation" src="{{ 'https://via.placeholder.com/200x200/FFFF00/000000' }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-3">
-                                    <!-- SKILL Four -->
-                                    <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="1100ms">
-{#                                        <input type="text" class="knob" value="95">#}
-{#                                        <h4>CSS3</h4>#}
-                                        <img id="realisation" src="{{ 'https://via.placeholder.com/200x200/FFFF00/000000' }}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="row">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-300" src="{{ 'https://via.placeholder.com/300x300/FFFF00/000000' }}" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-300" src="{{ 'https://via.placeholder.com/300x300/FFFF00/000000' }}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-300" src="{{ 'https://via.placeholder.com/300x300/FFFF00/000000' }}" alt="Third slide">
                     </div>
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
+
+{#                    <div class="row">#}
+{#                        <div class="container">#}
+{#                            <div class="wrapper-count">#}
+{#                                <div class="col-lg-2 col-md-2">#}
+{#                                    <!-- SKILL ONE -->#}
+{#                                    <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">#}
+{#                                        <input type="text" class="knob" value="86">#}
+{#                                        <h4>Web Design</h4>#}
+{#                                        <img id="realisation" src="{{ 'https://via.placeholder.com/150x100/FFFF00/000000' }}" alt="">#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-2 col-md-2">#}
+{#                                    <!-- SKILL TWO -->#}
+{#                                    <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="500ms">#}
+{#                                        <input type="text" class="knob" value="93">#}
+{#                                        <h4>Html5</h4>#}
+{#                                        <img id="realisation" src="{{ 'https://via.placeholder.com/150x100/FFFF00/000000' }}" alt="">#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-2 col-md-2">#}
+{#                                    <!-- SKILL THREE -->#}
+{#                                    <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">#}
+{#                                        <input type="text" class="knob" value="88">#}
+{#                                        <h4>JQuery</h4>#}
+{#                                        <img id="realisation" src="{{ 'https://via.placeholder.com/150x100/FFFF00/000000' }}" alt="">#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-2 col-md-2">#}
+{#                                    <!-- SKILL Four -->#}
+{#                                    <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="1100ms">#}
+{#                                        <input type="text" class="knob" value="95">#}
+{#                                        <h4>CSS3</h4>#}
+{#                                        <img id="realisation" src="{{ 'https://via.placeholder.com/150x100/FFFF00/000000' }}" alt="">#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-2 col-md-2">#}
+{#                                    <!-- SKILL Four -->#}
+{#                                    <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="1300ms">#}
+{#                                        #}{#                                        <input type="text" class="knob" value="95">#}
+{#                                        #}{#                                        <h4>CSS3</h4>#}
+{#                                        <img id="realisation" src="{{ 'https://via.placeholder.com/150x100/FFFF00/000000' }}" alt="">#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-2 col-md-2">#}
+{#                                    <!-- SKILL Four -->#}
+{#                                    <div class="skill wow fadeInRight" data-wow-duration="1s" data-wow-delay="1500ms">#}
+{#                                        #}{#                                        <input type="text" class="knob" value="95">#}
+{#                                        #}{#                                        <h4>CSS3</h4>#}
+{#                                        <img id="realisation" src="{{ 'https://via.placeholder.com/150x100/FFFF00/000000' }}" alt="">#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
         <!-- End Skills -->
 
     </section>
@@ -355,236 +400,49 @@
                 </div>
             </div>
             <!-- End Block Title -->
-            <div class="row">
-                <div class="container-fluid">
-                    <div class="wrapper-works">
-                        <div class="portfoliO">
-                            <ul id="filters" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
-                                <li><span class="filter active" data-filter="all">All</span></li>
-                                <li><span class="filter" data-filter=".category-1">IMAGES</span></li>
-                                <li><span class="filter" data-filter=".category-2">VIDEO</span></li>
-                                <li><span class="filter" data-filter=".category-3">PROJECTS</span></li>
-                            </ul>
-{#                            <div class="portfolio-wrap">#}
-{#                                <div class="myport wow fadeInDown" data-wow-duration="1s" data-wow-delay="600ms">#}
-{#                                    <div class="mix category-1 portfolio" data-myorder="1">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#"#}
-{#                                               data-single_url="portfolio-single-image.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">IMAGE</div>#}
-{#                                                    <div class="works-overlay-text">Single Image</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-image"></i></div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="mix category-2 portfolio" data-cat="category-2" data-myorder="2">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#"#}
-{#                                               data-single_url="portfolio-single-image.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">IMAGE</div>#}
-{#                                                    <div class="works-overlay-text">Single Image</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-video-camera"></i>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="mix category-3 portfolio" data-cat="category-3" data-myorder="3">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#"#}
-{#                                               data-single_url="portfolio-single-image.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">PROJECT</div>#}
-{#                                                    <div class="works-overlay-text">Single Image</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-graduation-cap"></i>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-
-{#                                    <div class="mix category-1 portfolio" data-cat="category-1" data-myorder="4">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#" data-single_url="portfolio-slider.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">IMAGE</div>#}
-{#                                                    <div class="works-overlay-text">Gallery</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-image"></i></div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-
-{#                                    <div class="mix category-2 portfolio" data-cat="category-2" data-myorder="5">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#" data-single_url="portfolio-slider.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">VIDEO</div>#}
-{#                                                    <div class="works-overlay-text">Gallery</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-video-camera"></i>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="mix category-3 portfolio" data-cat="category-3" data-myorder="6">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#" data-single_url="portfolio-slider.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">PROJECT</div>#}
-{#                                                    <div class="works-overlay-text">Gallery</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-graduation-cap"></i>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="mix category-1 portfolio" data-cat="category-1" data-myorder="7">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#"#}
-{#                                               data-single_url="portfolio-video-youtube.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">IMAGE</div>#}
-{#                                                    <div class="works-overlay-text">Video</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-image"></i></div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="mix category-2 portfolio" data-cat="category-2" data-myorder="8">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#"#}
-{#                                               data-single_url="portfolio-video-youtube.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">Video</div>#}
-{#                                                    <div class="works-overlay-text">Video</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-video-camera"></i>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="mix category-3 portfolio" data-cat="category-3" data-myorder="9">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#"#}
-{#                                               data-single_url="portfolio-video-youtube.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">PROJECT</div>#}
-{#                                                    <div class="works-overlay-text">Video</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-graduation-cap"></i>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="mix category-1 portfolio" data-cat="category-1" data-myorder="10">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#"#}
-{#                                               data-single_url="portfolio-video-vimeo.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">IMAGE</div>#}
-{#                                                    <div class="works-overlay-text">Video</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-image"></i></div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="mix category-2 portfolio" data-cat="category-2" data-myorder="11">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#"#}
-{#                                               data-single_url="portfolio-video-vimeo.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">Video</div>#}
-{#                                                    <div class="works-overlay-text">Video</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-video-camera"></i>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="mix category-3 portfolio" data-cat="category-3" data-myorder="12">#}
-{#                                        <div class="img-holder">#}
-{#                                            <a class="folio-read-more" href="#"#}
-{#                                               data-single_url="portfolio-video-vimeo.html"#}
-{#                                               title="This is the description">#}
-{#                                                <img class="" src="" alt="This is the title"> <!-- Change Image -->#}
-{#                                                <div class="works-overlay">#}
-{#                                                    <div class="img-overlay"></div>#}
-{#                                                </div>#}
-{#                                                <div class="overlay-content">#}
-{#                                                    <div class="works-overlay-category">PROJECT</div>#}
-{#                                                    <div class="works-overlay-text">Video</div>#}
-{#                                                    <div class="works-overlay-icon"><i class="fa fa-graduation-cap"></i>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                            </a>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="gap"></div>#}
-{#                                    <div class="gap"></div>#}
-{#                                </div>#}
-{#                            </div>#}
-                        </div>
-                    </div>
-                </div>
+            <div class="row" style="display: inline-block; justify-content: space-between; width: 55%">
+                            <div class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="{{ 'https://via.placeholder.com/200x200/FFFF00/000000' }}" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text" style="text-align: justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="{{ 'https://via.placeholder.com/200x200/FFFF00/000000' }}" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text" style="text-align: justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="{{ 'https://via.placeholder.com/200x200/FFFF00/000000' }}" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="{{ 'https://via.placeholder.com/200x200/FFFF00/000000' }}" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
             </div>
             <!-- Single Project -->
             <div id="works-single-wrap">

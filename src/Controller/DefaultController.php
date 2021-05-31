@@ -17,4 +17,14 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
+
+    /**
+     * @Route ("/a_propos", name="a_propos")
+     */
+    public function aPropos(): Response
+    {
+        return $this->render('default/a_propos.html.twig', [
+            'controller_name'=>'DefaultController',
+        ]);
+    }
 }

@@ -1308,14 +1308,14 @@ span.price {
 	font-size: 20px; 
 	font-weight: bold; 
 	padding-right: 30px; 
-	font-weight: normal; 
+	/*font-weight: normal; */
 }
 	
 .testimonial-inner p::after{  
 	font-family:'FontAwesome'; 
 	content:"\f10e"; 
 	font-size: 20px; 
-	font-weight: bold; 
+	/*font-weight: bold; */
 	padding-left: 30px; 
 	font-weight: normal; 
 }

@@ -10,6 +10,14 @@
 /*************************
 *******Typography******
 **************************/
+#partenaires{
+	/*width: 100px;*/
+	/*height: 200px;*/
+}
+.photoPartenaires{
+	height: 100px;
+	width: 200px;
+}
 .footerCenter{
 	display: flex;
 	justify-content: center;
@@ -691,7 +699,7 @@ cite {
 /* Facts */
 
 .facts{
-	background-image: url("https://via.placeholder.com/1920x911/FFFF00/000000");
+	background-image: url('../images/backgroundimg1.jpg');
 }
 
 .wrapper-number {
@@ -904,7 +912,7 @@ cite {
 /* Skills */
 
 .skills{
-	background-image: url('https://via.placeholder.com/1920x911/FFFF00/000000');
+	background-image: url('../images/backgroundimg2.jpg');
 }
 
 .wrapper-count {
@@ -1145,7 +1153,7 @@ li:last-child {
 /* Partners */
 
 .partners{
-	background-image: url("https://via.placeholder.com/1920x900/FFFF00/0000000");
+	background-image: url("../images/backgroundimg3.jpg");
 }
 
 .wrapper-partners{

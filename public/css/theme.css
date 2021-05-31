@@ -10,6 +10,13 @@
 /*************************
 *******Typography******
 **************************/
+#mentionsLegales{
+	color: black;
+}
+
+#mentionsLegales:hover {
+	color: #6d509e!important;
+}
 #partenaires{
 	/*width: 100px;*/
 	/*height: 200px;*/
@@ -1691,7 +1698,7 @@ h3.entry-title {
 /* Footer */
 .bottom-footer {
 /*    background: none repeat scroll 0 0 #fff;*/
-    background: none repeat scroll 0 0 #4b4b4b;
+	background-color: rgba(109,80,158,0.2777485994397759);
 }
 
 .bottom-footer-left p span {

@@ -4,7 +4,6 @@
 			display: flex;
 			justify-content: center;
 			background-color: rgba(109,80,158,0.2777485994397759);
-
 		}
 		/* Works */
 		.myport .portfolio ,
@@ -23,7 +22,16 @@
 		
 
 	/* Portrait tablet to landscape and desktop */
-	@media (min-width: 768px) and (max-width: 979px) {
+	@media (min-width: 768px) and (max-width: 1024px) {
+		.contents{
+			display: contents;
+		}
+		.rmariage{
+			max-width: 100%;
+		}
+		.aProposimg{
+			display: none;
+		}
 		#partenaires{
 			display: flex;
 			justify-content: center;
@@ -33,6 +41,7 @@
 		.photoPartenaires{
 			display: flex;
 			width: 60%;
+			height: 110px
 			justify-content: center;
 		}
 		/* Home Slider */
@@ -158,6 +167,17 @@
 	
 	/* Landscape phone to portrait tablet */
 	@media (max-width: 767px) {
+		.contents{
+			display: contents;
+			margin-bottom: 25px;
+		}
+		.rmariage{
+			max-width: 100%;
+		}
+		.aProposimg{
+			display: none;
+		}
+
 		#partenaires{
 			display: flex;
 			justify-content: center;
@@ -167,7 +187,8 @@
 		.photoPartenaires{
 			margin-top: 10px;
 			display: flex;
-			width: 80%;
+			width: 57%;
+			height: 70px;
 			justify-content: center;
 		}
 
@@ -230,7 +251,11 @@
 	}
 
 	/* Landscape phones and down */
-	@media (max-width: 480px) {	
+	@media (max-width: 480px) {
+		.contents{
+			display: contents;
+			margin-bottom: 25px;
+		}
 		
 		/* Home Slider */
 		#home-slider .caption h1 {

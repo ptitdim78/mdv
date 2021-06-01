@@ -10,6 +10,11 @@
 /*************************
 *******Typography******
 **************************/
+.sous-titre{
+	float: left;
+	font-weight: bold;
+	color: #6d509e;
+}
 #mentionsLegales{
 	color: black;
 }
@@ -706,7 +711,7 @@ cite {
 /* Facts */
 
 .facts{
-	background-image: url('../images/backgroundimg1.jpg');
+	background-image: url('../images/rings_wedding_bands_pillow_106174_1920x1080.jpg');
 }
 
 .wrapper-number {
@@ -919,7 +924,7 @@ cite {
 /* Skills */
 
 .skills{
-	background-image: url('../images/backgroundimg2.jpg');
+	background-image: url('../images/promotion-ventes-avec-primes-1920x1080.jpg');
 }
 
 .wrapper-count {
@@ -1160,7 +1165,7 @@ li:last-child {
 /* Partners */
 
 .partners{
-	background-image: url("../images/backgroundimg3.jpg");
+	background-image: url("../images/clothes.jpg");
 }
 
 .wrapper-partners{

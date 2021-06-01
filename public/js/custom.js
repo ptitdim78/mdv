@@ -119,63 +119,63 @@ $('.skills').waypoint(function() {
  
 
 /* Validate Form */
-  $(function() {
-    // Setup form validation on the #register-form element
-    $('#contact-form').validate({
-    
-        // Specify the validation rules
-        rules: {
-            name: {
-                required: true,
-                minlength: 2
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            message: {
-                required: true,
-                minlength: 2
-            }
-        },
-        
-        // Specify the validation error messages
-        messages: {
-            name: "Please enter your name",
-            email: "Please enter a valid email address",
-            message: "Please enter your message",
-        },
-        
-        submitHandler: function(form) 
-		{
-			var name = $("#name").val();
-			var email = $("#email").val();
-			var datastr ='name=' + name + '&email=' + email;
-			$("#output").html('<i class="icon-send fa fa-spinner fa-spin"></i> Email is sending...</p>');	
-			$.ajax({	
-				type: "POST",
-				url: "php/mail.php",
-				data: $(form).serialize(),
-				cache: false,
-				success: function(data)
-				{
-					if(data == "ok")
-					{
-						$("#output").css("background-color","#27AE61");
-						$("#output").html('<p>Thank you for contact us. As early as possible we will contact you</p>');	
-					}
-					else
-					{
-						$("#output").css("background-color","#DE654E");
-						$("#output").html('<p>Email NOT sent !!</p>');	
-					}
-					setTimeout('$("#output").fadeOut("slow")',5000);
-				}
-			});		
-		
-        }
-    });
-  });
+  // $(function() {
+  //   // Setup form validation on the #register-form element
+  //   $('#contact-form').validate({
+  //
+  //       // Specify the validation rules
+  //       rules: {
+  //           name: {
+  //               required: true,
+  //               minlength: 2
+  //           },
+  //           email: {
+  //               required: true,
+  //               email: true
+  //           },
+  //           message: {
+  //               required: true,
+  //               minlength: 2
+  //           }
+  //       },
+  //
+  //       // Specify the validation error messages
+  //       messages: {
+  //           name: "Please enter your name",
+  //           email: "Please enter a valid email address",
+  //           message: "Please enter your message",
+  //       },
+  //
+  //       submitHandler: function(form)
+	// 	{
+	// 		var name = $("#name").val();
+	// 		var email = $("#email").val();
+	// 		var datastr ='name=' + name + '&email=' + email;
+	// 		$("#output").html('<i class="icon-send fa fa-spinner fa-spin"></i> Email is sending...</p>');
+	// 		$.ajax({
+	// 			type: "POST",
+	// 			// url: "php/mail.php",
+	// 			data: $(form).serialize(),
+	// 			cache: false,
+	// 			success: function(data)
+	// 			{
+	// 				if(data == "ok")
+	// 				{
+	// 					$("#output").css("background-color","#27AE61");
+	// 					$("#output").html('<p>Thank you for contact us. As early as possible we will contact you</p>');
+	// 				}
+	// 				else
+	// 				{
+	// 					$("#output").css("background-color","#DE654E");
+	// 					$("#output").html('<p>Email NOT sent !!</p>');
+	// 				}
+	// 				setTimeout('$("#output").fadeOut("slow")',5000);
+	// 			}
+	// 		});
+	//
+  //       }
+  //   });
+  // });
 	 
 
 /* Validate Sign */

@@ -1809,7 +1809,7 @@ label.error {
 }
 
 textarea.form-control {
-    height: 102px;
+    /*height: 102px;*/
 }
 
 .contact_form input[type="submit"] {

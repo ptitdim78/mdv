@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
-
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,15 +17,12 @@ class FormController extends AbstractController
     public function contact(Request $request): Response
     {
         $contact = new Contact();
-        $form = $this->createForm(ContacType::class, $contact)->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid() )
-        {
+        $form = $this->createForm(ContactType::class, $contact)->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
 //            dd($form);
-            $this->addFlash('success', 'test reussi');
+            $this->addFlash('success', 'Test réussi');
             return $this->redirectToRoute('contact');
         }
-
         return $this->render('form/contact.html.twig', [
             'form' => $form->createView(),
         ]);

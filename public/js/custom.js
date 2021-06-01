@@ -151,10 +151,10 @@ $('.skills').waypoint(function() {
 	// 		var name = $("#name").val();
 	// 		var email = $("#email").val();
 	// 		var datastr ='name=' + name + '&email=' + email;
-	// 		$("#output").html('<i class="icon-send fa fa-spinner fa-spin"></i> Email is sending...</p>');
+	// 		$("#output").html('<i class="icon-send fa fa-spinner fa-spin"></i>Envoie de l'Email</p>');
 	// 		$.ajax({
 	// 			type: "POST",
-	// 			// url: "php/mail.php",
+	// 			url: "php/mail.php",
 	// 			data: $(form).serialize(),
 	// 			cache: false,
 	// 			success: function(data)

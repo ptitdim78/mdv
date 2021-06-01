@@ -1328,14 +1328,14 @@ span.price {
 	font-size: 20px; 
 	font-weight: bold; 
 	padding-right: 30px; 
-	/*font-weight: normal; */
+	font-weight: normal; 
 }
 	
 .testimonial-inner p::after{  
 	font-family:'FontAwesome'; 
 	content:"\f10e"; 
 	font-size: 20px; 
-	/*font-weight: bold; */
+	font-weight: bold; 
 	padding-left: 30px; 
 	font-weight: normal; 
 }
@@ -1808,9 +1808,9 @@ label.error {
 	box-shadow: 0 12px 19px rgba(255, 255, 255, 0.1) inset, 0 1px 7px rgba(0, 0, 0, 0.2);
 }
 
-/*textarea.form-control {*/
-/*    height: 102px;*/
-/*}*/
+textarea.form-control {
+    /*height: 102px;*/
+}
 
 .contact_form input[type="submit"] {
     color: #FFFFFF;

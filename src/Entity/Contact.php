@@ -42,6 +42,11 @@ class Contact
      */
     private $cookies;
 
+    /**
+     * @ORM\Column (type="string", length=20)
+     */
+    private $phone;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -106,4 +111,17 @@ class Contact
 
         return $this;
     }
+
+    public function getPhone(): ?string
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(string $phone): self
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
 }

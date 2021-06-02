@@ -1,0 +1,28 @@
+{% apply inline_css %}
+
+    <style>
+        .entete{
+
+        }
+    </style>
+    <div class="container">
+        <div class="entete">
+            <img src="" alt="">
+            <h1>Hello {{ name }}</h1>
+        </div>
+        <div>
+            <h3>objet {{ subject }}</h3>
+            <p> numero de telephone {{ phone }}</p>
+        </div>
+        <div>
+            <p>message</p>
+            <p>
+                {{ message }}
+            </p>
+        </div>
+    </div>
+
+
+
+
+{% endapply %}

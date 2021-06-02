@@ -1,0 +1,68 @@
+{% apply inline_css %}
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+        @import url('https://kit.fontawesome.com/b0058bad83.js');
+
+        @media (max-width: 480px) {
+            #responsivityTitre{
+                font-size: 15px;
+                letter-spacing: normal;
+            }
+            #responsivityObjet{
+                font-size: 20px;
+            }
+
+            #responsivityTel{
+                font-size: 20px;
+            }
+        }
+
+        .entete {
+            font-family: "Open Sans Condensed", sans-serif;
+            font-size: 30px;
+            letter-spacing: 5px;
+        }
+
+        .img {
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+
+        .obj {
+            font-family: "Open Sans Condensed", sans-serif;
+            font-size: 25px;
+        }
+        .banner-footer{
+            display: flex;
+            justify-content: center;
+
+        }
+
+        p::first-letter {
+            color: #6d509e;
+            font-size: 115%;
+        }
+
+    </style>
+
+    <div class="container">
+    <div class="img">
+        <img style="width: 25%" src="{{ email.image('@images/logo.png') }}" alt="Logo mouton des villes">
+    </div>
+    <div  id="responsivityTitre" class="entete">
+        <h2>Nouveau message de : <span style="text-transform: uppercase">{{ firstname }}</span> <span class="lastname">{{ lastname }}</span></h2>
+    </div>
+    <div class="obj">
+        <h3 id="responsivityObjet">Objet : {{ subject }}</h3>
+        <p id="responsivityTel">Numero de téléphone : <span style="font-weight: bold">{{ phone }}</span></p>
+        <p>Message :</p>
+        <p>{{ message }}</p>
+    </div>
+    <div class="banner-footer">
+        <img style="width: 100%" src="{{ email.image('@images/footer2.png')}}" alt="Informations contact">
+    </div>
+{% endapply %}

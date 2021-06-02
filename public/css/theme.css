@@ -10,6 +10,9 @@
 /*************************
 *******Typography******
 **************************/
+input, textarea{
+	caret-color: #6d509e;
+}
 .sous-titre{
 	float: left;
 	font-weight: bold;
@@ -594,7 +597,7 @@ cite {
 
 .element-title h3 {
 	font-size: 20px;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 
 .typography-title h3 {

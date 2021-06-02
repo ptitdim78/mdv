@@ -20,7 +20,7 @@ class Contact
     /**
      * @ORM\Column(type="string", length=108)
      */
-    private $name;
+    private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -47,19 +47,24 @@ class Contact
      */
     private $phone;
 
+    /**
+     * @ORM\Column (type="string", length=108)
+     */
+    private $lastname;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getFirstname(): ?string
     {
-        return $this->name;
+        return $this->firstname;
     }
 
-    public function setName(string $name): self
+    public function setFirstname(string $firstname): self
     {
-        $this->name = $name;
+        $this->firstname = $firstname;
 
         return $this;
     }
@@ -120,6 +125,18 @@ class Contact
     public function setPhone(string $phone): self
     {
         $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
 
         return $this;
     }

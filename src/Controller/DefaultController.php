@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Reviews;
 use Psr\Container\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,9 +12,16 @@ class DefaultController extends AbstractController
 {
     /**
      * @Route("/", name="default")
+     * @param Reviews $reviews
+     * @return Response
      */
-    public function index(): Response
+    public function index(Reviews $reviews): Response
     {
+        $listeReviews = $reviews->getDoctrine()->getRepository(Reviews::class)->findAll();
+        foreach ($listeReviews as $reviews){
+            return $reviews->getMessage();
+        }
+
         return $this->render('default/index.html.twig', [
             'controller_name' => 'DefaultController',
         ]);

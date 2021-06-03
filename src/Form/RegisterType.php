@@ -17,21 +17,24 @@ class RegisterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email', EmailType::class, [
+            ->add('email', EmailType::class,[
                 'constraints'=> new Length([
                     'min'=>3,
-                    'max'=>60
+                    'max'=>60,
                 ]),
+                'attr'=>[
+                    'placeholder'=>'Saisir votre adresse mail'
+                ]
             ])
-            ->add('password', RepeatedType::class, [
+            ->add('password', RepeatedType::class,[
                 'constraints'=>[
-                    new Regex ('/^(?=.{2,}$)(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/'),
-                    ],
-                'invalid_message'=>'le mot de passe et la confirmation doivent être identiques',
-                'type'=>PasswordType::class,
+                    new Regex('/^(?=.{2,}$)(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/'),
+                ],
+                'invalid_message'=>'Le mot de passe et confirmation doivent être identiques',
+                'type'=> PasswordType::class,
                 'required'=>true,
                 'first_options'=>[
-                    'label'=> 'Mot de passe',
+                    'label'=>'Mot de passe',
                     'attr'=>[
                         'placeholder'=>'Saisir votre mot de passe'
                     ]
@@ -42,7 +45,7 @@ class RegisterType extends AbstractType
                         'placeholder'=>'Merci de confirmer votre mot de passe'
                     ]
                 ]
-                ]);
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

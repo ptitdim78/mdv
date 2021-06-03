@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
 class FormController extends AbstractController
@@ -17,6 +16,8 @@ class FormController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      * @param Request $request
+     * @param MailerInterface $mailer
+     * @return Response
      * @throws TransportExceptionInterface
      */
     public function contact(Request $request, MailerInterface $mailer): Response

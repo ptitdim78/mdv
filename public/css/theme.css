@@ -16,6 +16,26 @@
 /*************************
 *******Typography******
 **************************/
+.titreCréa{
+	width: 230px!important;
+}
+.nosCréa{
+	width: 235px;
+	height: 115px;
+}
+#message{
+	width: 60%;
+	text-align: center;
+	justify-content: center;
+
+}
+
+/*#message::first-letter{*/
+/*	color: #6d509e;*/
+/*	font-size: xx-large;*/
+
+/*}*/
+
 input, textarea{
 	caret-color: #6d509e;
 }
@@ -1331,22 +1351,22 @@ span.price {
 	padding:
 }
 
-.testimonial-inner p::before{  
-	font-family:'FontAwesome'; 
-	content:"\f10d"; 
-	font-size: 20px; 
-	font-weight: bold; 
-	padding-right: 30px; 
-	font-weight: normal; 
+.testimonial-inner p::before{
+	font-family:'FontAwesome';
+	content:"\f10d";
+	font-size: 20px;
+	font-weight: bold;
+	padding-right: 30px;
+	font-weight: normal;
 }
-	
-.testimonial-inner p::after{  
-	font-family:'FontAwesome'; 
-	content:"\f10e"; 
-	font-size: 20px; 
-	font-weight: bold; 
-	padding-left: 30px; 
-	font-weight: normal; 
+
+.testimonial-inner p::after{
+	font-family:'FontAwesome';
+	content:"\f10e";
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 30px;
+	font-weight: normal;
 }
 
 .testimonial-inner img{  

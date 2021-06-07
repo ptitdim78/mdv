@@ -28,15 +28,13 @@ class ReviewsController extends AbstractController
     {
         $reviews = new Reviews();
         $form = $this->createForm(ReviewsType::class, $reviews)->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid())
-        {
+
+        if($form->isSubmitted() && $form->isValid()){
             $this->addFlash('success', 'Test réussi');
             return $this->redirectToRoute('reviews');
         }
-
         return $this->render('reviews/index.html.twig', [
-            'form' => $form->createView(),
+            'form'=>$form->createView(),
         ]);
     }
-
 }

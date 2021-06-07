@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Reviews;
 use phpDocumentor\Reflection\Types\Integer;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -18,6 +19,8 @@ class ReviewsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $roles = ['role1', 'role2', 'role3'];
+
         $builder
             ->add('firstname',  TextType::class,[
                 'constraints'=> new Length([
@@ -45,22 +48,8 @@ class ReviewsType extends AbstractType
                     'placeholder'=>'Saisir votre message'
                 ]
             ])
-            ->add('rating', ChoiceType::class,[
-                'choices'=>[
-                    '1'=>1,
-                    '2'=>2,
-                    '3'=>3,
-                    '4'=>4,
-                    '5'=>5,
-                ],
-                'choice_attr' => [
-                    '1' => ['data-color' => 'Red'],
-                    '2' => ['data-color' => 'Red'],
-                    '3' => ['data-color' => 'Orange'],
-                    '4'=>['data-color' => 'Green'],
-                    '5'=>['data-color' => 'Green'],
-                    'choice_label' => 'note',
-                ]
+            ->add('rating', IntegerType::class,[
+                'label'=>'Note',
             ])
         ;
     }

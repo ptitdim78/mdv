@@ -34,15 +34,15 @@
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
                                     {{ form_row(form.rating) }}
-                                    <span><i class="fas fa-star{{ reviews.rating > 0 ? ' action-2' : '' }}"></i></span>
-                                    <span><i class="fas fa-star{{ reviews.rating > 1 ? ' action-2' : '' }}"></i></span>
-                                    <span><i class="fas fa-star{{ reviews.rating > 2 ? ' action-2' : '' }}"></i></span>
-                                    <span><i class="fas fa-star{{ reviews.rating > 3 ? ' action-2' : '' }}"></i></span>
-                                    <span><i class="fas fa-star{{ reviews.rating > 4 ? ' action-2' : '' }}"></i></span>
+                                    <span><i class="fas fa-star"></i>{{ reviews.rating }}</span>
+                                    <span><i class="fas fa-star"></i>{{ reviews.rating }}</span>
+                                    <span><i class="fas fa-star"></i>{{ reviews.rating }}</span>
+                                    <span><i class="fas fa-star"></i>{{ reviews.rating }}</span>
+                                    <span><i class="fas fa-star"></i>{{ reviews.rating }}</span>
                                 </div>
-                                <div class="form-group">
-                                    <input type="submit" class="" value="Envoyer">
-                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input style="width: 50%" type="submit" class="" value="Envoyer">
                             </div>
                         </div>
                     </div>

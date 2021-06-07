@@ -81,9 +81,11 @@
     <section class="section-wrapper">
         <div class="team">
             <div class="meet-the-team">
-                <div class="row">
-                    <div class="wow fadeInDown element-title" data-wow-duration="1s" data-wow-delay="300ms">
-                        <h1 id="titreSection">L'ÉQUIPE</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="element-title wow fadeInDown element-title" data-wow-duration="1s" data-wow-delay="300ms">
+                            <h1 id="titreSection">L'ÉQUIPE</h1>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -194,14 +196,17 @@
         <div class="skills parallax">
             <div class="overlay">
                 <div class="wrapper-block-skills">
-                    <div class="element-title">
-                        <div class="row">
-                            <div class="container element-title">
-                                <h1 id="titreSection" class="main-color wow fadeInDown" data-wow-duration="1s"
-                                    data-wow-delay="300ms">Nos partenaires</h1>
+
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="element-title">
+                                    <h1 id="titreSection" class="main-color wow fadeInDown" data-wow-duration="1s"
+                                        data-wow-delay="300ms">Nos partenaires</h1>
+                                </div>
                             </div>
                         </div>
-                    </div>
+
                     <div class="row">
                         <div class="container">
                             <div class="wrapper-count">
@@ -244,16 +249,14 @@
     </section>
     <section class="section-wrapper" id="works">
         <div class="works">
-            <div class="element-title">
-                <div class="row">
-                    <div class="container">
-                        <div class="section-title wow fadeInDown element-title" data-wow-duration="1s"
+        <div class="container">
+                    <div class="row">
+                        <div class="element-title section-title wow fadeInDown element-title" data-wow-duration="1s"
                              data-wow-delay="300ms">
                             <h1 id="titreSection">Exemples de nos créations !</h1>
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="row">
                 <div class="container-fluid">
                     <div class="wrapper-works">
@@ -304,9 +307,11 @@
         <div class="partners parallax">
             <div class="overlay">
                 <div class="wrapper-block-partners">
-                    <div class="row element-title">
-                        <h1 id="titreSection" class="main-color wow fadeInDown" data-wow-duration="1s"
-                            data-wow-delay="300ms">NOS BOUTIQUES</h1>
+                    <div class="container">
+                        <div class="row element-title">
+                            <h1 id="titreSection" class="main-color wow fadeInDown" data-wow-duration="1s"
+                                data-wow-delay="300ms">NOS BOUTIQUES</h1>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="container">
@@ -315,14 +320,15 @@
                                      data-wow-duration="1s"
                                      data-wow-delay="300ms">
                                     <p class="shop" id="white">Objets/goodies</p><img id="realisation"
-                                            src="{{ '../images/schwarz-wolf2.png' }}" alt="Schwarz-wolf boutique">
+                                                                                      src="{{ '../images/schwarz-wolf2.png' }}" alt="Schwarz-wolf boutique">
+
                                 </div>
                                 <div class="col-lg-6 col-md-6 partners-img wow fadeInRight"
                                      data-wow-duration="1s"
                                      data-wow-delay="500ms">
                                     <p class="shop" id="white">Textile</p><img id="realisation"
-                                            src="{{ '../images/galimard1.png' }}" alt="Galimard">
-                                </div>
+                                                                               src="{{ '../images/galimard1.png' }}" alt="Galimard">
+=
                             </div>
                         </div>
                     </div>
@@ -366,58 +372,60 @@
         {% endfor %}</script>
 
     <section class="section-wrapper">
-            <div class="overlay">
-                <div class="wrapper-block-clients">
-                    <div class="element-title">
-                        <div class="row">
-                            <div style="display: flex; justify-content: center" class="container">
-                                <h1 id="titreSection" class="main-color wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">Avis clients</h1>
-                            </div>
+        <div class="overlay">
+            <div class="wrapper-block-clients">
+                <div class="container">
+                    <div class="row">
+                        <div style="display: flex; justify-content: center" class="element-title">
+                            <h1 id="titreSection" class="main-color wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">Avis clients</h1>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="container">
-                            <div class="wrapper-clients wow fadeInDown" data-wow-duration="1s" data-wow-delay="500ms">
-                                <div class="carousel slide carousel-mod" data-ride="carousel" id="testimonial">
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <div class="row">
-                                                <div class="col-lg-12 col-sm-12">
-                                                    <div id="pAvis" style="display: flex; justify-content: center" class="testimonial-inner">
-                                                    </div>
-                                                    <div class="row" id="name"></div>
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <div class="wrapper-clients wow fadeInDown" data-wow-duration="1s" data-wow-delay="500ms">
+                            <div class="carousel slide carousel-mod" data-ride="carousel" id="testimonial">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-sm-12">
+                                                <div id="pAvis" style="display: flex; justify-content: center" class="testimonial-inner">
+
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="row">
-                                                <div class="col-lg-12 col-sm-12">
-                                                    <div id="pAvis2" style="display: flex; justify-content: center" class="testimonial-inner">
-                                                    </div>
-                                                    <div id="name2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="row">
-                                                <div class="col-lg-12 col-sm-12">
-                                                    <div id="pAvis3" style="display: flex; justify-content: center" class="testimonial-inner">
-                                                    </div>
-                                                    <div id="name3"></div>
-                                                </div>
+                                                <div class="row" id="name"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#testimonial" data-slide-to="0" class="active"></li>
-                                        <li data-target="#testimonial" data-slide-to="1"></li>
-                                        <li data-target="#testimonial" data-slide-to="2"></li>
-                                    </ol>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-sm-12">
+                                                <div id="pAvis2" style="display: flex; justify-content: center" class="testimonial-inner">
+                          </div>
+                                                <div id="name2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-sm-12">
+                                                <div id="pAvis3" style="display: flex; justify-content: center" class="testimonial-inner">
+
+                                                </div>
+                                                <div id="name3"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <ol class="carousel-indicators">
+                                    <li data-target="#testimonial" data-slide-to="0" class="active"></li>
+                                    <li data-target="#testimonial" data-slide-to="1"></li>
+                                    <li data-target="#testimonial" data-slide-to="2"></li>
+                                </ol>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 {% endblock %}

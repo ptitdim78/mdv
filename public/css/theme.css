@@ -16,6 +16,20 @@
 /*************************
 *******Typography******
 **************************/
+#sous-titre{
+	font-size: large;
+	display: flex;
+	margin-bottom: 20px;
+	justify-content: center;
+	font-style: italic;
+}
+.name{
+	text-transform: uppercase;
+}
+.name::first-letter{
+	color: #6d509e;
+	font-size: x-large;
+}
 .titreCréa{
 	width: 230px!important;
 }

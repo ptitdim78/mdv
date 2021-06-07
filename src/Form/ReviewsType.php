@@ -19,6 +19,8 @@ class ReviewsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $roles = ['role1', 'role2', 'role3'];
+
         $builder
             ->add('firstname',  TextType::class,[
                 'constraints'=> new Length([
@@ -47,8 +49,9 @@ class ReviewsType extends AbstractType
                 ]
             ])
             ->add('rating', IntegerType::class,[
-                'label'=>'Note'
-            ]);
+                'label'=>'Note',
+            ])
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

@@ -34,6 +34,8 @@ class Reviews
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Range (min=0, max=5)
+     * @Assert\NotNull(message="Merci de rentrer une valeur valide")
      */
     private $rating;
 

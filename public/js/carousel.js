@@ -19,21 +19,18 @@ window.onload = function carousel() {
 
     let p = document.createElement('p');
     let h51 = document.createElement('h5');
-    let h511 = document.createElement('h5');
     let newAvis = '';
     let newFirstName = '';
     let newLastName = '';
 
     let p2 = document.createElement('p');
     let h52 = document.createElement('h5')
-    let h522 = document.createElement('h5')
     let newAvis2 = '';
     let newFirstName2 = '';
     let newLastName2 = '';
 
     let p3 = document.createElement('p');
     let h53 = document.createElement('h5')
-    let h533 = document.createElement('h5')
     let newAvis3 = '';
     let newFirstName3 = '';
     let newLastName3 = '';

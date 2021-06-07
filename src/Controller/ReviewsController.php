@@ -34,7 +34,7 @@ class ReviewsController extends AbstractController
             return $this->redirectToRoute('reviews');
         }
         return $this->render('reviews/index.html.twig', [
-            'form'=>$form->createView(),
+            'form'=>$form->createView(), 'reviews'=>$reviews
         ]);
     }
 }

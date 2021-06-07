@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div id="reviews">
+    {% for reviews in allReviews %}
+        <p>{{ reviews.message }}</p>
+        <p>{{ reviews.firstname }} {{ reviews.lastname }}</p>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

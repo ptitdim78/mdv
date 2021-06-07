@@ -3,34 +3,25 @@
 namespace App\Controller;
 
 use App\Entity\Reviews;
-use Doctrine\ORM\EntityManagerInterface;
-use Psr\Container\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-    private $em;
-
-    public function __construct(EntityManagerInterface $em)
-    {
-        $this->em = $em;
-    }
     /**
      * @Route("/", name="default")
-     * @param Reviews $reviews
      * @return Response
      */
-    public function index(Reviews $reviews): Response
+    public function index(): Response
     {
-        $listeReviews = $reviews->getDoctrine()->getRepository(Reviews::class)->findAll();
-        foreach ($listeReviews as $reviews){
-            return $reviews->getMessage();
-        }
+        $allReviews = $this->getDoctrine()->getRepository(Reviews::class)->findAll();
 
         return $this->render('default/index.html.twig', [
+            'allReviews' => $allReviews,
             'controller_name' => 'DefaultController',
+//        return $this->render('default/index.html.twig', [
+//            'controller_name' => 'DefaultController',
         ]);
     }
 

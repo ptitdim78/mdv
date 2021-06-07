@@ -3,11 +3,18 @@
 namespace App\Controller;
 
 use App\Entity\Reviews;
+use App\Repository\ReviewsRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use http\Env\Request;
+use http\Message;
 use Psr\Container\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 class DefaultController extends AbstractController
 {
@@ -17,20 +24,19 @@ class DefaultController extends AbstractController
     {
         $this->em = $em;
     }
+
     /**
      * @Route("/", name="default")
-     * @param Reviews $reviews
      * @return Response
      */
-    public function index(Reviews $reviews): Response
+
+    public function index(): Response
     {
-        $listeReviews = $reviews->getDoctrine()->getRepository(Reviews::class)->findAll();
-        foreach ($listeReviews as $reviews){
-            return $reviews->getMessage();
-        }
+
+        $listReviews = $this->getDoctrine()->getRepository(Reviews::class)->findAll();
 
         return $this->render('default/index.html.twig', [
-            'controller_name' => 'DefaultController',
+            'controller_name' => 'DefaultController', 'toutesLesReviews' => $listReviews,
         ]);
     }
 

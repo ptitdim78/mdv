@@ -38,7 +38,7 @@ class ProductsType extends AbstractType
                 'label'=>'Poids',
             ])
             ->add('composition', TextareaType::class, [
-                'label'=>''
+                'label'=>'Composition'
             ])
             ->add('online', CheckboxType::class, [
                 'label'=>'Mise en ligne',

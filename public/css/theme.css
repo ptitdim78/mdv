@@ -16,6 +16,10 @@
 /*************************
 *******Typography******
 **************************/
+.custom-file{
+	display: flex;
+	justify-content: center;
+}
 #sous-titre{
 	font-size: large;
 	display: flex;

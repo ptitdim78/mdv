@@ -3,20 +3,68 @@
 {% block title %}Hello ProductsController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello</h1>
-    {{ form_start(form, {attr : {novalidate: 'novalidate'}}) }}
-
-    {{ form_end(form) }}
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/mdv2/src/Controller/ProductsController.php'|file_link(0) }}">src/Controller/ProductsController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/mdv2/templates/products/index.html.twig'|file_link(0) }}">templates/products/index.html.twig</a></code></li>
-    </ul>
+<div class="section-wrapper" id="contacts">
+    <div class="contacts">
+        <div class="row">
+            <div class="container">
+                <div style="display: flex; justify-content: center" class="section-title wow fadeInDown"
+                     data-wow-duration="1s" data-wow-delay="300ms">
+                    <h1 id="titreSection"><span>Créer un produit</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="section-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="wrapper-contact">
+                        <div style="width: 50%!important;" class="contact_form">
+                            <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
+                                <form id="contact-form" method="post" action="#">
+                                    {{ form_start(form, {attr : {novalidate: 'novalidate'}}) }}
+                                    <div class="form-group">
+                                        {{ form_row(form.title) }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form_row(form.description) }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form_row(form.longueur) }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form_row(form.hauteur) }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form_row(form.profondeur) }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form_row(form.poids) }}
+                                    </div>
+                                    <div disabled="true" class="form-group">
+                                        {{ form_row(form.composition) }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div style="display: flex" class="form-group">
+                                            <div style="padding-right: 10px">{{ form_label(form.image) }}</div>
+                                            {{ form_widget(form.image)}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            {{ form_row(form.online) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Envoyer">
+                                    </div>
+                                    {{ form_end(form) }}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

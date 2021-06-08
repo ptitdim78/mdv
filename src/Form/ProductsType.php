@@ -16,32 +16,32 @@ class ProductsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', TextType::class,[
-                'label'=>'Nom du produit'
-                ])
+            ->add('title', TextType::class, [
+                'label'=>'Nom du produit',
+            ])
             ->add('description', TextareaType::class, [
-                'label'=>'Description'
+                'label'=>'Description',
             ])
             ->add('image', FileType::class, [
                 'label'=>'Image'
             ])
-            ->add('longueur', TextType::class,[
-                'label'=>'Longueur'
+            ->add('longueur', TextType::class, [
+                'label'=>'Longueur',
             ])
             ->add('hauteur', TextType::class, [
                 'label'=>'Hauteur'
             ])
             ->add('profondeur', TextType::class, [
-                'label'=>'Profondeur'
+                'label'=>'Profondeur',
             ])
             ->add('poids', TextType::class, [
-                'label'=>'Poids'
+                'label'=>'Poids',
             ])
             ->add('composition', TextareaType::class, [
-                'label'=>'composition'
+                'label'=>''
             ])
-            ->add('online', CheckboxType::class,[
-                'label'=>'Mise en ligne'
+            ->add('online', CheckboxType::class, [
+                'label'=>'Mise en ligne',
             ])
         ;
     }

@@ -19,13 +19,14 @@ class ProductsController extends AbstractController
         $products = new Products();
         $form = $this->createForm(ProductsType::class, $products)->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()){
             $this->addFlash('success', 'Votre produit a bien été ajouté');
-            return $this->redirectToRoute('products');
+            return $this-$this->redirectToRoute('products');
         }
         return $this->render('products/index.html.twig', [
             'form'=>$form->createView(),
-            'products'=>$products,
+            'products' => $products,
+            'controller_name' => 'ProductsController',
         ]);
     }
 }

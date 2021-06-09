@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class ProductsController extends AbstractController
 {
@@ -22,30 +23,27 @@ class ProductsController extends AbstractController
     }
 
     /**
-     * @Route("/products", name="products")
-     * @param FileUploader $fileUploader,
+     * @Route("/products", name="products", methods={"GET|POST"})
+     * @param Request $request
+     * @param SluggerInterface $slugger
+     * @return Response
      */
-    public function index(Request $request, FileUploader $fileUploader): Response
+    public function index(Request $request, SluggerInterface $slugger, FileUploader $fileUploader): Response
     {
         $products = new Products();
-        $form = $this->createForm(ProductsType::class, $products)->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()){
-            /**@var UploadedFile $productFile*/
-            $productFile = $form->get('image')->getData();
+        $form = $this->createForm(ProductsType::class, $products);
+        $form->handleRequest($request);
 
-            if($productFile){
-                $productFileName = $fileUploader->upload($productFile);
-                $products->setImage($productFileName);
-            }
-            $this->em->persist($products);
-            $this->em->flush();
-
+        if ($form->isSubmitted() && $form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($products);
+            $em->flush();
 
             $this->addFlash('success', 'Votre produit a bien été ajouté');
-            return $this-$this->redirectToRoute('products');
-        }
-
+            return $this->redirectToRoute('products');
+            }
 
         return $this->render('products/index.html.twig', [
             'form'=>$form->createView(),

@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ProductsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ProductsRepository::class)
@@ -28,7 +30,13 @@ class Products
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @param UploadedFile $image
+     * @Assert\File(
+     *     mimeTypes={"image/png", "image/svg+xml", "image/jpg", "image/jpeg"},
+     *     mimeTypesMessage="Le type de fichier et incorrect {{ type }}, vous devez choisir un fichier de type {{ types }}",
+     *     maxSize="2M", maxSizeMessage="Le fichier ne peut pas dépasser 2Mo"
+     * )
      */
     private $image;
 
@@ -61,6 +69,12 @@ class Products
      * @ORM\Column(type="boolean")
      */
     private $online;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
+
 
     public function getId(): ?int
     {
@@ -174,4 +188,17 @@ class Products
 
         return $this;
     }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
 }

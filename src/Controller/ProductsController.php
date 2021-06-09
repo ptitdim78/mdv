@@ -7,10 +7,12 @@ use App\Form\ProductsType;
 use App\Service\FileUploader;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class ProductsController extends AbstractController
 {
@@ -29,24 +31,15 @@ class ProductsController extends AbstractController
     {
         $products = new Products();
         $form = $this->createForm(ProductsType::class, $products)->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()){
-            /**@var UploadedFile $productFile*/
-            $productFile = $form->get('image')->getData();
-
-            if($productFile){
-                $productFileName = $fileUploader->upload($productFile);
-                $products->setImage($productFileName);
-            }
-            $this->em->persist($products);
-            $this->em->flush();
-
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($products);
+            $em->flush();
 
             $this->addFlash('success', 'Votre produit a bien été ajouté');
-            return $this-$this->redirectToRoute('products');
+            return $this->redirectToRoute('products');
         }
-
-
         return $this->render('products/index.html.twig', [
             'form'=>$form->createView(),
             'products' => $products,

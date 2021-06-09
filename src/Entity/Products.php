@@ -20,6 +20,11 @@ class Products
     private $id;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $online;
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $title;
@@ -64,17 +69,6 @@ class Products
      * @ORM\Column(type="text", nullable=true)
      */
     private $composition;
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $online;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $slug;
-
 
     public function getId(): ?int
     {
@@ -188,17 +182,4 @@ class Products
 
         return $this;
     }
-
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    public function setSlug(string $slug): self
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
 }

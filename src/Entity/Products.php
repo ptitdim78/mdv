@@ -4,8 +4,10 @@ namespace App\Entity;
 
 use App\Repository\ProductsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
-use Vich\UploaderBundle\Entity\File;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
@@ -68,17 +70,17 @@ class Products
     private $composition;
 
     /**
-     * @ORM\Column
-     * @Vich\UploadableField(mapping="products_image", fileNameProperty="image")
+     * @ORM\Column(type="datetime", nullable= true)
+     * @var \DateTime
+     */
+    private $updateAt;
+
+    /**
+     * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
      * @var File
      */
     private $imageFile;
 
-    /**
-     * @ORM\Column(type="datetime")
-     * @var \DateTime
-     */
-    private $updateAt;
 
 
     public function getId(): ?int
@@ -194,20 +196,23 @@ class Products
         return $this;
     }
 
-    public function getImageFile()
-    {
-        return $this->imageFile;
-    }
-
-    public function setImageFile(File $image = null)
-    {
-        $this->imageFile = $image;
-
-        if ($image) {
-            // if 'updatedAt' is not defined in your entity, use another property
-            $this->updateAt = new \DateTime('now');
-        }
-    }
+//    public function getImageFile(): File
+//    {
+//        return $this->imageFile;
+//    }
+//
+//    public function setImageFile(File $image = null)
+//    {
+//        $this->imageFile = $image;
+//
+//        // VERY IMPORTANT:
+//        // It is required that at least one field changes if you are using Doctrine,
+//        // otherwise the event listeners won't be called and the file is lost
+//        if ($image) {
+//            // if 'updatedAt' is not defined in your entity, use another property
+//            $this->updateAt = new \DateTime('now');
+//        }
+//    }
 
     public function getUpdateAt(): ?\DateTimeInterface
     {
@@ -219,6 +224,24 @@ class Products
         $this->updateAt = $updateAt;
 
         return $this;
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+        public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updateAt = new \DateTime('now');
+        }
     }
 
 }

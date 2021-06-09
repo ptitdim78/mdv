@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Products;
+use DateTime;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -10,7 +11,10 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints\File;
+use Vich\UploaderBundle\Form\Type\VichFileType;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class ProductsType extends AbstractType
 {
@@ -23,7 +27,7 @@ class ProductsType extends AbstractType
             ->add('description', TextareaType::class, [
                 'label'=>'Description',
             ])
-            ->add('image', FileType::class, [
+            ->add('image', TextType::class, [
                 'label'=>'Image',
                 'mapped'=> false,
                 'required'=> false,
@@ -46,7 +50,10 @@ class ProductsType extends AbstractType
             ->add('online', CheckboxType::class, [
                 'label'=>'Mise en ligne',
             ])
-        ;
+            ->add('imageFile', VichFileType::class, [
+                
+            ]);
+            ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

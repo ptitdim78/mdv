@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\File;
 
 class ProductsType extends AbstractType
 {
@@ -23,7 +24,9 @@ class ProductsType extends AbstractType
                 'label'=>'Description',
             ])
             ->add('image', FileType::class, [
-                'label'=>'Image'
+                'label'=>'Image',
+                'mapped'=> false,
+                'required'=> false,
             ])
             ->add('longueur', TextType::class, [
                 'label'=>'Longueur',

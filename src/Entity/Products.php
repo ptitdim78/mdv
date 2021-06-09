@@ -70,6 +70,9 @@ class Products
      */
     private $composition;
 
+
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -182,4 +185,5 @@ class Products
 
         return $this;
     }
+
 }

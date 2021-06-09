@@ -4,11 +4,13 @@ namespace App\Entity;
 
 use App\Repository\ProductsRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Entity\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ProductsRepository::class)
+ * @Vich\Uploadable
  */
 class Products
 {
@@ -36,12 +38,7 @@ class Products
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @param UploadedFile $image
-     * @Assert\File(
-     *     mimeTypes={"image/png", "image/svg+xml", "image/jpg", "image/jpeg"},
-     *     mimeTypesMessage="Le type de fichier et incorrect {{ type }}, vous devez choisir un fichier de type {{ types }}",
-     *     maxSize="2M", maxSizeMessage="Le fichier ne peut pas dépasser 2Mo"
-     * )
+     * @var string
      */
     private $image;
 
@@ -70,7 +67,18 @@ class Products
      */
     private $composition;
 
+    /**
+     * @ORM\Column
+     * @Vich\UploadableField(mapping="products_image", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
 
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    private $updateAt;
 
 
     public function getId(): ?int
@@ -182,6 +190,33 @@ class Products
     public function setComposition(?string $composition): self
     {
         $this->composition = $composition;
+
+        return $this;
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updateAt = new \DateTime('now');
+        }
+    }
+
+    public function getUpdateAt(): ?\DateTimeInterface
+    {
+        return $this->updateAt;
+    }
+
+    public function setUpdateAt(\DateTimeInterface $updateAt): self
+    {
+        $this->updateAt = $updateAt;
 
         return $this;
     }

@@ -4,10 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Products;
 use App\Form\ProductsType;
-use App\Service\FileUploader;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,7 +26,7 @@ class ProductsController extends AbstractController
      * @param SluggerInterface $slugger
      * @return Response
      */
-    public function index(Request $request, SluggerInterface $slugger, FileUploader $fileUploader): Response
+    public function index(Request $request, SluggerInterface $slugger): Response
     {
         $products = new Products();
 

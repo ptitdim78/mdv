@@ -3,32 +3,75 @@
 {% block title %}Hello ProductsController!{% endblock %}
 
 {% block body %}
-
-<div class="section-wrapper" id="contacts">
-    <div class="contacts">
-        <div class="row">
-            <div class="container">
-                <div style="display: flex; justify-content: center" class="section-title wow fadeInDown"
-                     data-wow-duration="1s" data-wow-delay="300ms">
-                    <h1 id="titreSection"><span>Notre boutique</span></h1>
-                </div>
-            </div>
-        </div>
-        <div class="section-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="wrapper-contact">
-                        <div style="width: 50%!important;" class="contact_form">
-                            <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
-                            {% for produitImage in products %}
-                                <img style="width: 50px" src=" {{  vich_uploader_asset(produitImage, 'imageFile') }}" alt="">
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="container">
+    <div class="row">
+        <div class="container">
+            <div style="display: flex; justify-content: center" class="section-title wow fadeInDown"
+                 data-wow-duration="1s" data-wow-delay="300ms">
+                <h1 id="titreSection"><span>Notre boutique</span></h1>
             </div>
         </div>
     </div>
+    <div class="container">
+        {% for produit in products | slice(0, products|length) %}
+            {% if produit.online == true %}
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="mesCards">
+                            <a style="max-width: 525px;max-height: 420px;" href="#" class="thumbnail">
+                                <img  class="imgProduct" src=" {{ vich_uploader_asset(produit, 'imageFile') }}" alt="">
+                            </a>
+                            <div style="text-align: justify">
+                                <h4><strong>Nom :</strong> {{ produit.title }}</h4>
+                                <h4><strong>Description :</strong> {{ produit.description }}</h4>
+                                <h4><strong>Longueur :</strong> {{ produit.longueur }}</h4>
+                                <h4><strong>Hauteur :</strong> {{ produit.hauteur }}</h4>
+                                <h4>Profondeur : {{ produit.profondeur }}</h4>
+                                <h4>Poids : {{ produit.poids }}</h4>
+                                <h4>Composition : {{ produit.composition }}</h4>
+                            </div>
+                            <div class="team-member-role">Le mouton des villes &#169</div>
+                        </div>
+                        </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 </div>
-{% endblock %}
+    {# <div style="padding-bottom: 10px" class="container"> #}
+
+    {# </div> #}
+
+    {# <section class="section-wrapper"> #}
+    {# <div class="team"> #}
+    {# <div class="meet-the-team"> #}
+    {# <div class="section-wrapper"> #}
+    {# <div style="margin-bottom: 25px; margin-top: 25px" class="container"> #}
+    {# <div class="row"> #}
+
+    {# <div class="col-md-6"> #}
+    {# <div class="team-member"> #}
+    {# <div class="team-member-holder wow flipInY" data-wow-duration="1s" #}
+    {# data-wow-delay="1100ms"> #}
+    {# <div class="team-member-image"> #}
+
+
+
+    {# </div> #}
+
+    {# </div> #}
+    {# </div> #}
+    {# </div> #}
+    {# </div> #}
+
+    {# </div> #}
+    {# </div> #}
+    {# </div> #}
+
+    {# </div> #}
+    {# <div id="team-single-wrap"> #}
+    {# <div id="team-single"> #}
+    {# </div> #}
+    {# </div> #}
+    {# </div> #}
+    {# </section> #}
+
+    {% endblock %}

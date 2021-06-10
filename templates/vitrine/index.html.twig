@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <section class="section-wrapper">
+        <div class="team">
+            <div class="meet-the-team">
+                <div class="container">
+                    <div class="row">
+                        <div class="element-title wow fadeInDown element-title" data-wow-duration="1s" data-wow-delay="300ms">
+                            <h1 id="titreSection">Notre vitrine</h1>
+                        </div>
+                    </div>
+                </div>
+                {% for CoupDeCoeurs in CoupDeCoeur %}
+                <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
+                    <div class="container">
+                        <div class="wrapper-team">
+                            <div class="col-lg-8 col-md-8" style="padding-bottom: 20px">
+                                <div class="card-group" style="border: 1px solid black;box-shadow: 10px 10px 5px -4px;">
+                                    <div class="card" style="text-align: -webkit-center">
+                                        <div style="height: 300px">
+                                            <img class="card-img-top" src="{{  vich_uploader_asset(CoupDeCoeurs, 'imageFile') }}" alt="Card image cap" style="height: 100%; width: 100%">
+                                        </div>
+                                        <div class="card-body" style="height: 300px; padding: 0 10px 10px 10px">
+                                            <h2 class="card-title" style="color: #6d509e"><strong>{{ CoupDeCoeurs.title }}</strong></h2>
+                                            <p class="card-text" style=""><i>{{ CoupDeCoeurs.description}}</i></p>
+                                            <p class="card-text"><small class="text-muted">{{ CoupDeCoeurs.remise }}</small></p>
+                                        </div>
+                                        <div style="padding: 10px; background-color: black; border-radius: 10px; width: 80%; margin-bottom: 3px;box-shadow: 10px 10px 5px -4px;">
+                                            <a href="{{ path ('contact') }}"><strong>Demande de renseignements</strong></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div id="team-single-wrap">
+                <div id="team-single">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
+        {% for Promos in Promo  %}
+        {% endfor %}
+    </div>
+    <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
+        {% for FinDeSeries in FinDeSerie  %}
+        {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}

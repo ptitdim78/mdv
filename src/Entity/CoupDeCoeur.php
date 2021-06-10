@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\CoupDeCoeurRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
@@ -27,6 +28,8 @@ class CoupDeCoeur
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(
+     *     max="600", maxMessage="Ce champ ne peut dépasser 600 caractères.")
      */
     private $description;
 

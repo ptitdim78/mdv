@@ -804,6 +804,7 @@ cite {
     display: block;
     margin: 0 auto 50px;
     max-width: 350px;
+	min-height: 500px;
     padding: 0;
     width: 100%;
 	vertical-align: top;

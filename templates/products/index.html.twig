@@ -20,6 +20,9 @@
                     <div class="wrapper-contact">
                         <div style="width: 50%!important;" class="contact_form">
                             <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
+                            {% for produitImage in products %}
+                                <img style="width: 50px" src=" {{  vich_uploader_asset(produitImage, 'imageFile') }}" alt="">
+                                {% endfor %}
                             </div>
                         </div>
                     </div>

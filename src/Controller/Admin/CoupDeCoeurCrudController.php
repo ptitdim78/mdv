@@ -28,4 +28,5 @@ class CoupDeCoeurCrudController extends AbstractCrudController
             TextField::new('remise'),
         ];
     }
+
 }

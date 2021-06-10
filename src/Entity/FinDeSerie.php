@@ -44,6 +44,7 @@ class FinDeSerie
 
     /**
      * @ORM\Column(type="datetime")
+     * @var \DateTime
      */
     private $createdAt;
 
@@ -109,7 +110,7 @@ class FinDeSerie
 
         if ($image) {
             $this->createdAt = new \DateTime('now');
-        };
+        }
     }
 
     public function getCreatedAt(): ?\DateTimeInterface

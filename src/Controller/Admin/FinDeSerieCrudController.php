@@ -17,7 +17,6 @@ class FinDeSerieCrudController extends AbstractCrudController
         return FinDeSerie::class;
     }
 
-
     public function configureFields(string $pageName): iterable
     {
         return [
@@ -29,4 +28,5 @@ class FinDeSerieCrudController extends AbstractCrudController
             TextField::new('remise'),
         ];
     }
+
 }

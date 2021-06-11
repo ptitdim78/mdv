@@ -3,8 +3,10 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Promo;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
@@ -27,7 +29,13 @@ class PromoCrudController extends AbstractCrudController
             ImageField::new('image')->setBasePath('uploads/image/')->onlyOnIndex(),
             BooleanField::new('online'),
             TextField::new('remise'),
+            DateField::new('createdAt')
         ];
+    }
+
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud->setDefaultSort(['createdAt'=>'DESC']);
     }
 
 }

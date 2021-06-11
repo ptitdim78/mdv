@@ -5,7 +5,14 @@
 	/*	}*/
 	/*}*/
 
-	@media (min-width: 980px) and (max-width: 3000px) {
+	@media (min-width: 1367px) and (max-width: 3000px) {
+		.descriptifProduct{
+			height: 420px;
+		}
+		.mesCards{
+			height: 710px!important;
+		}
+
 		#navigation{
 			display: flex;
 			justify-content: center;
@@ -26,19 +33,35 @@
 		  
 	}
 	@media (min-width: 1024px) and (max-width: 1366px) {
-		#navigation{
-			display: contents!important;
-			justify-content: center;
-			background-color: white;
+		.leMDV{
+			display: none;
 		}
+		.mesCards{
+			height: auto!important;
+		}
+
+		.descriptifProduct{
+			height: 420px;
+		}
+		.infosSupp{
+			display: none;
+		}
+		#navigation {
+			display: flex;
+			justify-content: center;
+			background-color: rgba(109,80,158,0.2777485994397759);
+		}
+	}
 	/* Portrait tablet to landscape and desktop */
 	@media (min-width: 768px) and (max-width: 1024px) {
-		.container{
-			padding-left: 8px!important;
+		.descriptionProduit, .infosSupp{
+			display: none;
 		}
-		.imgProduct{
-			width: 100%;
+		.descriptifProduct{
 			height: 280px!important;
+		}
+		.container {
+			padding-left: 8px !important;
 		}
 		.contents{
 			display: contents;
@@ -184,9 +207,9 @@
 	
 	/* Landscape phone to portrait tablet */
 	@media (max-width: 767px) {
-		.imgProduct{
+		.productContainer{
+			display: block;
 		}
-	}
 		.contents{
 			display: contents;
 			margin-bottom: 25px;
@@ -271,10 +294,6 @@
 
 	/* Landscape phones and down */
 	@media (max-width: 480px) {
-		.imgProduct{
-			width: 100%;
-			height: 250px!important;
-		}
 		.partners-img{
 			padding-bottom: 20px;
 		}

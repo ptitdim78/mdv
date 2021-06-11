@@ -2,19 +2,17 @@
 
 namespace App\Entity;
 
-use App\Repository\ProductsRepository;
+use App\Repository\ProductsClothesRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\HttpFoundation\File\File;
-use Symfony\Component\Validator\Constraints as Assert;
-use Vich\UploaderBundle\Form\Type\VichFileType;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass=ProductsRepository::class)
+ * @ORM\Entity(repositoryClass=ProductsClothesRepository::class)
  * @Vich\Uploadable
  */
-class Products
+class ProductsClothes
 {
     /**
      * @ORM\Id
@@ -22,11 +20,6 @@ class Products
      * @ORM\Column(type="integer")
      */
     private $id;
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $online;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -47,40 +40,45 @@ class Products
     private $image;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(max="10", maxMessage="Ce champs ne peut depasser 10 caractères")
+     * @ORM\Column(type="boolean")
      */
-    private $longueur;
+    private $online;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(max="10", maxMessage="Ce champs ne peut depasser 10 caractères")
+     * @Assert\Length(max="15", maxMessage="Ce champs ne peut depasser 15 caractères")
      */
-    private $hauteur;
+    private $poidsCarton;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(max="10", maxMessage="Ce champs ne peut depasser 10 caractères")
+     * @Assert\Length(max="15", maxMessage="Ce champs ne peut depasser 15 caractères")
      */
-    private $profondeur;
+    private $dimensionColis;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(max="10", maxMessage="Ce champs ne peut depasser 10 caractères")
+     * @Assert\Length(max="150", maxMessage="Ce champs ne peut depasser 150 caractères")
+     */
+    private $infos;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(max="15", maxMessage="Ce champs ne peut depasser 15 caractères")
      */
     private $poids;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
-     * @Assert\Length(max="20", maxMessage="Ce champs ne peut depasser 20 caractères")
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(max="15", maxMessage="Ce champs ne peut depasser 15 caractères")
      */
     private $composition;
 
     /**
-     * @ORM\Column(type="datetime", nullable= true)
+     * @ORM\Column(type="datetime")
      * @var \DateTime
      */
-    private $updateAt;
+    private $updatedAt;
 
     /**
      * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
@@ -92,8 +90,6 @@ class Products
      * @ORM\Column(type="string", length=255)
      */
     private $lien;
-
-
 
     public function getId(): ?int
     {
@@ -129,7 +125,7 @@ class Products
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 
@@ -148,38 +144,38 @@ class Products
         return $this;
     }
 
-    public function getLongueur(): ?string
+    public function getPoidsCarton(): ?string
     {
-        return $this->longueur;
+        return $this->poidsCarton;
     }
 
-    public function setLongueur(?string $longueur): self
+    public function setPoidsCarton(string $poidsCarton): self
     {
-        $this->longueur = $longueur;
+        $this->poidsCarton = $poidsCarton;
 
         return $this;
     }
 
-    public function getHauteur(): ?string
+    public function getDimensionColis(): ?string
     {
-        return $this->hauteur;
+        return $this->dimensionColis;
     }
 
-    public function setHauteur(?string $hauteur): self
+    public function setDimensionColis(?string $dimensionColis): self
     {
-        $this->hauteur = $hauteur;
+        $this->dimensionColis = $dimensionColis;
 
         return $this;
     }
 
-    public function getProfondeur(): ?string
+    public function getInfos(): ?string
     {
-        return $this->profondeur;
+        return $this->infos;
     }
 
-    public function setProfondeur(?string $profondeur): self
+    public function setInfos(?string $infos): self
     {
-        $this->profondeur = $profondeur;
+        $this->infos = $infos;
 
         return $this;
     }
@@ -208,14 +204,14 @@ class Products
         return $this;
     }
 
-    public function getUpdateAt(): ?\DateTimeInterface
+    public function getUpdatedAt(): ?\DateTimeInterface
     {
-        return $this->updateAt;
+        return $this->updatedAt;
     }
 
-    public function setUpdateAt(\DateTimeInterface $updateAt): self
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
     {
-        $this->updateAt = $updateAt;
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }
@@ -225,12 +221,12 @@ class Products
         return $this->imageFile;
     }
 
-        public function setImageFile(File $image = null)
+    public function setImageFile(File $image = null)
     {
         $this->imageFile = $image;
 
         if ($image) {
-            $this->updateAt = new \DateTime('now');
+            $this->updatedAt = new \DateTime('now');
         }
     }
 
@@ -245,5 +241,4 @@ class Products
     {
         return $this->lien;
     }
-
 }

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Products;
+use App\Entity\ProductsClothes;
 use App\Entity\Reviews;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,11 +25,12 @@ class ProductsController extends AbstractController
      */
     public function index(): Response
     {
-        $products= $this->getDoctrine()->getRepository(Products::class)->findAll();
+        $products= $this->getDoctrine()->getRepository(Products::class)->findBy([], ['id'=>'DESC']);
+        $productsClothes= $this->getDoctrine()->getRepository(ProductsClothes::class)->findBy([], ['id'=>'DESC']);
 
         return $this->render('products/index.html.twig', [
             'controller_name' => 'ProductsController',
-            'products'=>$products
+            'products'=>$products, 'productsClothes'=>$productsClothes
         ]);
     }
 }

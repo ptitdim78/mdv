@@ -16,9 +16,9 @@ class VitrineController extends AbstractController
      */
     public function index(): Response
     {
-        $finDeSerie= $this->getDoctrine()->getRepository(FinDeSerie::class)->findAll();
-        $promo= $this->getDoctrine()->getRepository(Promo::class)->findAll();
-        $coupDeCoeur= $this->getDoctrine()->getRepository(CoupDeCoeur::class)->findAll();
+        $finDeSerie= $this->getDoctrine()->getRepository(FinDeSerie::class)->findBy([], ['id'=>'DESC']);
+        $promo= $this->getDoctrine()->getRepository(Promo::class)->findBy([], ['id'=>'DESC']);
+        $coupDeCoeur= $this->getDoctrine()->getRepository(CoupDeCoeur::class)->findBy([], ['id'=>'DESC']);
 
         return $this->render('vitrine/index.html.twig', [
             'FinDeSerie'=> $finDeSerie,

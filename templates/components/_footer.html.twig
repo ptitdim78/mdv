@@ -1,8 +1,4 @@
-<!-- Footer -->
-<!-- Scroll to Top  -->
 <a href="#" class="scroll-up"><i class="fa fa-arrow-up"></i></a>
-<!-- End Scroll To Top  -->
-
 <div class="bottom-footer">
     <div class="container">
         <div class=" wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
@@ -22,9 +18,10 @@
                 <a id="mentionsLegales" href="{{ path ('mentions_legales') }}">Mentions légales</a> -
                 <a href="{{ path ('app_login') }}"><i class="fa fa-user"></i></a>
                 {% if is_granted ('ROLE_ADMIN') %}
+                <a href="{{ path('gestion_admin') }}"> - <i class="fa fa-list"></i></a>
                 <a href="{{ path ('app_logout') }}"> - <i class="fa fa-times-circle"></i></a></p>
                 {% endif %}
         </div>
     </div>
 </div>
-<!-- End Footer -->
+

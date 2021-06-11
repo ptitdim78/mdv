@@ -1,60 +1,167 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
 
-    <section class="section-wrapper">
+
+{% block body %}
+    {% block javascripts %}
+        <script>
+            function coeur(){
+                id2 = document.getElementById('2')
+                id3 = document.getElementById('3')
+                id2.classList = 'filtreVitrine'
+                id3.classList = 'filtreVitrine'
+            }
+        </script>
+    {% endblock %}
+
+    <style>  .filtreVitrine{
+            display: none;
+        }</style>
+
+
+    <ul id="filters" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
+        <a><span class="filter active" data-filter="all">All</span></a>
+        <li  onclick="coeur()"><span class="filter" data-filter=".category-1">coeur</span></li>
+        <li onclick="promo"><span class="filter" data-filter=".category-2">VIDEO</span></li>
+        <li onclick="fds"><span class="filter" data-filter=".category-3">PROJECTS</span></li>
+    </ul>
+
+    <section class="section-wrapper" id="1">
         <div class="team">
             <div class="meet-the-team">
                 <div class="container">
                     <div class="row">
                         <div class="element-title wow fadeInDown element-title" data-wow-duration="1s" data-wow-delay="300ms">
-                            <h1 id="titreSection">Notre vitrine</h1>
+                            <h1 id="titreSection">Nos coups de coeur</h1>
                         </div>
                     </div>
                 </div>
-                {% for CoupDeCoeurs in CoupDeCoeur %}
                 <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
                     <div class="container">
                         <div class="wrapper-team">
-                            <div class="col-lg-8 col-md-8" style="padding-bottom: 20px">
-                                <div class="card-group" style="border: 1px solid black;box-shadow: 10px 10px 5px -4px;">
+                            {% for CoupDeCoeurs in CoupDeCoeur %}
+                                {% if CoupDeCoeurs.online == true %}
+                            <div class="col-lg-6 col-md-6" style="padding-bottom: 20px">
+                                <div class="card-group" style="border-radius: 10px;border: 1px solid black;box-shadow: 10px 10px 5px -4px;">
                                     <div class="card" style="text-align: -webkit-center">
                                         <div style="height: 300px">
-                                            <img class="card-img-top" src="{{  vich_uploader_asset(CoupDeCoeurs, 'imageFile') }}" alt="Card image cap" style="height: 100%; width: 100%">
+                                            <img class="card-img-top" src="{{  vich_uploader_asset(CoupDeCoeurs, 'imageFile') }}" alt="Card image cap" style="border-radius: 10px 10px 0 0;height: 100%; width: 100%">
                                         </div>
-                                        <div class="card-body" style="height: 300px; padding: 0 10px 10px 10px">
-                                            <h2 class="card-title" style="color: #6d509e"><strong>{{ CoupDeCoeurs.title }}</strong></h2>
-                                            <p class="card-text" style=""><i>{{ CoupDeCoeurs.description}}</i></p>
-                                            <p class="card-text"><small class="text-muted">{{ CoupDeCoeurs.remise }}</small></p>
+                                        <div class="card-body" style="min-height: 300px; padding: 0 40px 40px 40px">
+                                            <hr>
+                                            <h2 class="card-title" style="color: #6d509e;"><strong>{{ CoupDeCoeurs.title }}</strong></h2>
+                                            <hr>
+                                            <div style="min-height: 235px; word-break: break-word">
+                                                <p class="card-text"><i>{{ CoupDeCoeurs.description}}</i></p>
+                                                <p class="card-text" style="text-align: center; color: red"><span><strong>{{ CoupDeCoeurs.remise }}</strong></span></p>
+                                            </div>
+
                                         </div>
-                                        <div style="padding: 10px; background-color: black; border-radius: 10px; width: 80%; margin-bottom: 3px;box-shadow: 10px 10px 5px -4px;">
-                                            <a href="{{ path ('contact') }}"><strong>Demande de renseignements</strong></a>
+                                        <div style="padding: 10px; background-color: #6d509e; border-radius: 10px; width: 80%; margin-bottom: 30px;box-shadow: 10px 10px 5px -4px;">
+                                            <a href="{{ path ('contact') }}"><strong style="color: white">Demande de renseignements</strong></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
-                {% endfor %}
             </div>
-            <div id="team-single-wrap">
-                <div id="team-single">
+        </div>
+    </section>
+    <div class="facts parallax" id="2">
+        <div class="overlay">
+            <div class="wrapper-block-facts">
+                <div class="container">
+                    <div class="row">
+                        <div class="element-title">
+                            <h1 id="titreSection" class="main-color wow fadeInUp" data-wow-duration="1s"
+                                data-wow-delay="300ms">
+                                Nos promotions</h1>
+                        </div>
+            </div><div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
+                <div class="container">
+                    <div class="wrapper-team">
+                    {% for Promos in Promo  %}
+                        {% if Promos.online == true %}
+                        <div class="col-lg-6 col-md-6" style="padding-bottom: 20px">
+                            <div class="card-group" style="border-radius: 10px;border: 1px solid black;box-shadow: 10px 10px 5px -4px; background-color: white; margin-top: 40px">
+                                <div class="card" style="text-align: -webkit-center; margin-bottom: 20px">
+                                    <div style="height: 300px">
+                                        <div style="display: none">{{ Promos.id }}</div>
+                                        <img class="card-img-top" src="{{  vich_uploader_asset(Promos, 'imageFile') }}" alt="Card image cap" style="border-radius: 10px 10px 0 0;height: 100%; width: 100%">
+                                    </div>
+                                    <div class="card-body" style="min-height: 300px; padding: 0 40px 40px 40px">
+                                        <hr>
+                                        <h2 class="card-title" style="color: #6d509e"><strong>{{ Promos.title }}</strong></h2>
+                                        <hr>
+                                        <div style="min-height: 235px; word-break: break-word">
+                                            <p class="card-text"><i>{{ Promos.description}}</i></p>
+                                            <p class="card-text" style="text-align: center; color: red"><span><strong>{{ Promos.remise }}</strong></span></p>
+                                        </div>
+
+                                    </div>
+                                    <div style="padding: 10px; background-color: #6d509e; border-radius: 10px; width: 80%; box-shadow: 10px 10px 5px -4px;">
+                                        <a href="{{ path ('contact') }}"><strong style="color: white">Demande de renseignements</strong></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <section class="section-wrapper" id="3">
+        <div class="team">
+            <div class="meet-the-team">
+                <div class="container">
+                    <div class="row">
+                        <div class="element-title wow fadeInDown element-title" data-wow-duration="1s" data-wow-delay="300ms">
+                            <h1 id="titreSection">Nos fins de série</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
+                    <div class="container">
+                        <div class="wrapper-team">
+                            {% for FinDeSeries in FinDeSerie  %}
+                                {% if FinDeSeries.online == true %}
+                                <div class="col-lg-6 col-md-6" style="padding-bottom: 20px">
+                                    <div class="card-group" style="border-radius: 10px;border: 1px solid black;box-shadow: 10px 10px 5px -4px;">
+                                        <div class="card" style="text-align: -webkit-center">
+                                            <div style="height: 300px">
+                                                <div style="display: none">{{ FinDeSeries.id }}</div>
+                                                <img class="card-img-top" src="{{  vich_uploader_asset(FinDeSeries, 'imageFile') }}" alt="Card image cap" style="border-radius: 10px 10px 0 0;height: 100%; width: 100%">
+                                            </div>
+                                            <div class="card-body" style="min-height: 300px; padding: 0 40px 40px 40px">
+                                                <hr>
+                                                <h2 class="card-title" style="color: #6d509e"><strong>{{ FinDeSeries.title }}</strong></h2>
+                                                <hr>
+                                                <div style="min-height: 235px; word-break: break-word">
+                                                    <p class="card-text"><i>{{ FinDeSeries.description}}</i></p>
+                                                    <p class="card-text" style="text-align: center; color: red"><span><strong>{{ FinDeSeries.remise }}</strong></span></p>
+                                                </div>
 
+                                            </div>
+                                            <div style="padding: 10px; background-color: #6d509e; border-radius: 10px; width: 80%; margin-bottom: 30px;box-shadow: 10px 10px 5px -4px;">
+                                                <a href="{{ path ('contact') }}"><strong style="color: white">Demande de renseignements</strong></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
-
-    <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
-        {% for Promos in Promo  %}
-        {% endfor %}
-    </div>
-    <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
-        {% for FinDeSeries in FinDeSerie  %}
-        {% endfor %}
-    </div>
-    </div>
-
 {% endblock %}

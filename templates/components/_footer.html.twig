@@ -13,12 +13,16 @@
             </ul>
         </div>
         <div id="white" class="footerCenter wow fadeInUp" data-wow-duration="1s" data-wow-delay="450ms">
-            <p style="color: black">
+            <p id="resizeFooter" style="color: black">
                 <span>&#169; 2017 - {{ 'now' | date ('Y') }}- SAS Le mouton des villes </span> -
-                <a id="mentionsLegales" href="{{ path ('mentions_legales') }}">Mentions légales</a> -
-                <a href="{{ path ('app_login') }}"><i class="fa fa-user"></i></a>
+                <a id="mentionsLegales" href="{{ path ('mentions_legales') }}">Mentions légales</a>
+                {% if is_granted('ROLE_ADMIN') %}
+
+                {% else %}
+                    -  <a href="{{ path ('app_login') }}"><i class="fa fa-user"></i></a>
+                {% endif %}
                 {% if is_granted ('ROLE_ADMIN') %}
-                <a href="{{ path('gestion_admin') }}"> - <i class="fa fa-list"></i></a>
+                <a href="{{ path('gestion_admin') }}"> - <i class="fa fa-cog"></i></a>
                 <a href="{{ path ('app_logout') }}"> - <i class="fa fa-times-circle"></i></a></p>
                 {% endif %}
         </div>

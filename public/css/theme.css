@@ -66,10 +66,10 @@
    word-wrap: break-word;
 }
 .descriptionProduit::first-letter{
+.leMDV::first-letter{
 	color: #6d509e;
 	font-size: x-large;
 }
-
 .titleProduit{
 	justify-content: center;
 	display: flex;
@@ -77,24 +77,20 @@
 	text-transform: uppercase;
 }
 
-.titleProduit:first-letter{
-	color: #6d509e;
-}
-
-.team-member-role::first-letter{
-	color: #6d509e;
-	font-size: x-large;
-}
 .mesCards{
 	border: solid  #6d509e 1px;
 	padding: 2%;
 	-webkit-box-shadow: 5px 5px 1px 0 #9c509e;
 	margin-top: 35px;
 }
-.imgProduct{
-	width: 100%;
-	height: auto!important;
+.productContainer{
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	margin-bottom: 25px;
+	margin-top: 20px
 }
+
 .custom-file{
 	display: flex;
 	justify-content: center;

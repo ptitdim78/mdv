@@ -3,7 +3,6 @@
 {% block title %}Hello ProductsController!{% endblock %}
 
 {% block body %}
-    <div class="container">
         <div class="container" style="padding-bottom: 60px; border-bottom: solid 1px #6d509e">
             <div class="row">
                 <div class="container">
@@ -17,19 +16,25 @@
                 <div class="container productContainer">
                     {% for produit in products | slice(0, products|length) %}
                         {% if produit.online == true %}
-                            <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                 <div class="mesCards">
-                                    <div class="team-member-holder wow flipInY" data-wow-duration="1s"
+                                    <div style="height: 100%; border-radius : 0px!important;" class=" wow flipInY" data-wow-duration="1s"
                                          data-wow-delay="1100ms">
-                                        <a href="{{produit.lien }}" class="team-member-imageP thumbnail">
-                                            <img class="imgProduct" src=" {{ vich_uploader_asset(produit, 'imageFile') }}"
+                                        <div style="height: 300px" id="imageProduit">
+                                            <img style="width: 100%; height: 100%" src=" {{ vich_uploader_asset(produit, 'imageFile') }}"
                                                  alt="">
-                                        </a>
-                                        <div class="descriptifProduct">
-                                            <div style="border-bottom: solid 1px #6d509e; border-top: solid 1px #6d509e">
-                                                <h4><span class="titleProduit">{{ produit.title }}</span></h4>
+                                            <a href="{{produit.lien }}">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div style="min-height: 410px; text-align: justify; padding: 5%" id="tailleDescProduits">
+                                        <div style="border-bottom: solid 1px #6d509e; border-top: solid 1px #6d509e">
+                                            <h4><span class="titleProduit">{{ produit.title }}</span></h4>
+                                        </div>
+                                        <div style="height: 300px" id="touteDescriptionProduits">
+                                            <div style="word-wrap: break-word; min-height: 140px;" id="descriptionProduits">
+                                                <h4>{{ produit.description }}</h4>
                                             </div>
-                                            <h4 class="descriptionProduit">{{ produit.description }}</h4>
                                             {% if produit.longueur == null %}
                                                 <p></p>
                                             {% else %}
@@ -59,10 +64,9 @@
                                             {% else %}
                                                 <h4><strong>Composition :</strong> {{ produit.composition }}</h4>
                                             {% endif %}
-
                                         </div>
-                                        <div class="team-member-role leMDV">Le mouton des villes &#169</div>
                                     </div>
+                                    <div class="team-member-role leMDV">Le mouton des villes &#169</div>
                                 </div>
                             </div>
                         {% endif %}
@@ -79,67 +83,69 @@
                     </div>
                 </div>
             </div>
-            <div class="container productContainer">
+            <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
+                <div class="container productContainer">
                 {% for produitC in productsClothes | slice(0, productsClothes|length) %}
                     {% if produitC.online == true %}
-                        <div class="col-lg-4 col-md-4 col-sm-4">
-                            <div class="mesCards">
-                                <div class="team-member-holder wow flipInY" data-wow-duration="1s"
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="mesCards" >
+                                <div style=" height: 100%; border-radius : 0px!important;" class="team-member-holder wow flipInY" data-wow-duration="1s"
                                      data-wow-delay="1100ms">
-                                    <a href="{{ produitC.lien }}" class="thumbnail team-member-imageP">
-                                        <img class="imgProduct" src=" {{ vich_uploader_asset(produitC, 'imageFile') }}"
+                                    <div style="height: 300px" id="imageProduit">
+                                        <img style="width: 100%; height: 100%" src=" {{ vich_uploader_asset(produitC, 'imageFile') }}"
                                              alt="">
-                                    </a>
-
-                                    <div class="descriptifProduct">
+                                        <a href="{{ produitC.lien }}">
+                                        </a>
+                                    </div>
+                                </div>
+                                    <div style="min-height: 410px; text-align: justify;  word-wrap: break-word; padding: 5%">
                                         <div style="border-bottom: solid 1px #6d509e; border-top: solid 1px #6d509e">
                                             <h4><span class="titleProduit">{{ produitC.title }}</span></h4>
                                         </div>
-                                        <h4 class="descriptionProduit">{{ produitC.description }}</h4>
-                                        {% if produitC.poids == null %}
-                                            <p></p>
-                                        {% else %}
-                                            <h4 id="test"><strong>Poids :</strong> {{ produitC.poids }}</h4>
-                                        {% endif %}
+                                        <div style="height: 380px" id="touteDescriptionClothes" id="tailleDescProduits">
+                                            <div style="word-wrap: break-word; min-height: 140px;" id="descriptionProduits">
+                                                <h4>{{ produitC.description }}</h4>
+                                            </div>
+                                            {% if produitC.poids == null %}
+                                                <p></p>
+                                            {% else %}
+                                                <h4 id="test"><strong>Poids :</strong> {{ produitC.poids }}</h4>
+                                            {% endif %}
 
-                                        {% if produitC.composition == null %}
-                                            <p></p>
-                                        {% else %}
-                                            <h4><strong>Composition :</strong> {{ produitC.composition }}</h4>
-                                        {% endif %}
+                                            {% if produitC.composition == null %}
+                                                <p></p>
+                                            {% else %}
+                                                <h4><strong>Composition :</strong> {{ produitC.composition }}</h4>
+                                            {% endif %}
 
-                                        {% if produitC.poidsCarton == null %}
-                                            <p></p>
-                                        {% else %}
-                                            <h4><strong>Poids du carton : </strong>{{ produitC.poidsCarton }}</h4>
-                                        {% endif %}
+                                            {% if produitC.poidsCarton == null %}
+                                                <p></p>
+                                            {% else %}
+                                                <h4><strong>Poids du carton : </strong>{{ produitC.poidsCarton }}</h4>
+                                            {% endif %}
 
-                                        {% if produitC.dimensionColis == null %}
-                                            <p></p>
-                                        {% else %}
-                                            <h4><strong>Dimension du colis :</strong> {{ produitC.dimensionColis }}</h4>
-                                        {% endif %}
+                                            {% if produitC.dimensionColis == null %}
+                                                <p></p>
+                                            {% else %}
+                                                <h4><strong>Dimension du colis :</strong> {{ produitC.dimensionColis }}</h4>
+                                            {% endif %}
 
-                                        {% if produitC.infos == null %}
-                                            <p></p>
-                                        {% else %}
-                                            <h4 class="infosSupp"><strong>Infos supplémentaires :</strong> {{ produitC.infos }}</h4>
-                                        {% endif %}
+                                            {% if produitC.infos == null %}
+                                                <p></p>
+                                            {% else %}
+                                                <h4 class="infosSupp"><strong>Infos supplémentaires :</strong> {{ produitC.infos }}</h4>
+                                            {% endif %}
 
+                                        </div>
                                     </div>
                                     <div class="team-member-role leMDV">Le mouton des villes &#169</div>
-                                </div>
                             </div>
                         </div>
                     {% endif %}
                 {% endfor %}
             </div>
+            </div>
         </div>
-    </div>
-        </div>
-
-
-
         <div class="wrapper-block-partners">
             <div class="container">
                 <div class="row element-title">
@@ -166,5 +172,4 @@
                 </div>
             </div>
         </div>
-    </div>
 {% endblock %}

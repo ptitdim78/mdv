@@ -30,7 +30,7 @@ class Products
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(max="20", maxMessage="Ce champs ne peut depasser 20 caractères")
+     * @Assert\Length(max="40", maxMessage="Ce champs ne peut depasser 40 caractères")
      */
     private $title;
 
@@ -72,7 +72,7 @@ class Products
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @Assert\Length(max="20", maxMessage="Ce champs ne peut depasser 20 caractères")
+     * @Assert\Length(max="80", maxMessage="Ce champs ne peut depasser 80 caractères")
      */
     private $composition;
 

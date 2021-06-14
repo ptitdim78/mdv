@@ -7,6 +7,7 @@ use App\Entity\FinDeSerie;
 use App\Entity\Products;
 use App\Entity\ProductsClothes;
 use App\Entity\Promo;
+use App\Entity\QrCode;
 use App\Entity\Reviews;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -41,5 +42,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Coup de coeur', 'fas fa-list', CoupDeCoeur::class);
         yield MenuItem::linkToCrud('Promotion', 'fas fa-list', Promo::class);
         yield MenuItem::linkToCrud('Fin de série', 'fas fa-list', FinDeSerie::class);
+        yield MenuItem::linkToCrud('QR code', 'fas fa-list', QrCode::class);
     }
 }

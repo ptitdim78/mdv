@@ -16,6 +16,10 @@
 /*************************
 *******Typography******
 **************************/
+.filtreVitrine{
+	display: none;
+}
+
 .team-member-imageP {
 	float: none;
 	height: 0;

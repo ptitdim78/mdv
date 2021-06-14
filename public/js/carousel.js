@@ -65,3 +65,39 @@ window.onload = function carousel() {
     document.getElementById("pAvis3").appendChild(p3);
     document.getElementById('name3').appendChild(h53);
 }
+
+function tous() {
+    id1 = document.getElementById('1')
+    id2 = document.getElementById('2')
+    id3 = document.getElementById('3')
+    idAll = [id1, id2, id3]
+    idAll.forEach(function (id) {
+        id.classList.remove('filtreVitrine')
+        id2.classList = 'facts parallax'
+    });
+}
+function coeur(){
+    id1 = document.getElementById('1')
+    id2 = document.getElementById('2')
+    id3 = document.getElementById('3')
+    id1.classList.remove('filtreVitrine')
+    id2.classList = 'filtreVitrine'
+    id3.classList = 'filtreVitrine'
+}
+function promo(){
+    id1 = document.getElementById('1')
+    id2 = document.getElementById('2')
+    id3 = document.getElementById('3')
+    id1.classList = 'filtreVitrine'
+    id2.classList.remove('filtreVitrine')
+    id2.classList = 'facts parallax'
+    id3.classList = 'filtreVitrine'
+}
+function fds(){
+    id1 = document.getElementById('1')
+    id2 = document.getElementById('2')
+    id3 = document.getElementById('3')
+    id1.classList = 'filtreVitrine'
+    id2.classList = 'filtreVitrine'
+    id3.classList.remove('filtreVitrine')
+}

@@ -1,12 +1,12 @@
-{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+ @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext
 <div id="main-menu">
     {% block main_menu_before %}{% endblock %}
 
-    <ul class="menu">
+    <ul class="menu" style="width: 105%; font-weight: bold">
         {% block main_menu %}
             {% for menuItem in ea.mainMenu.items %}
                 {% block menu_item %}
-                    <li class="{{ menuItem.isMenuSection ? 'menu-header' : 'menu-item' }} {{ menuItem.hasSubItems ? 'has-submenu' }} {{ ea.mainMenu.isSelected(menuItem) ? 'active' }} {{ ea.mainMenu.isExpanded(menuItem) ? 'expanded' }}">
+                    <li    class="{{ menuItem.isMenuSection ? 'menu-header' : 'menu-item' }} {{ menuItem.hasSubItems ? 'has-submenu' }} {{ ea.mainMenu.isSelected(menuItem) ? 'active' }} {{ ea.mainMenu.isExpanded(menuItem) ? 'expanded' }}">
                         {{ _self.render_menu_item(menuItem) }}
 
                         {% if menuItem.hasSubItems %}
@@ -35,7 +35,7 @@
         <span class="{{ item.cssClass }}">{{ item.label|raw }}</span>
     {% else %}
         <a href="{{ item.linkUrl }}" class="{{ item.hasSubItems ? 'submenu-toggle' }} {{ item.cssClass }}" target="{{ item.linkTarget }}" rel="{{ item.linkRel }}" referrerpolicy="origin-when-cross-origin">
-            {% if item.icon is not empty %}<i class="menu-icon fa-fw {{ item.icon }}"></i>{% endif %}
+            {% if item.icon is not empty %}<i style="color: #6d509e" class="menu-icon fa-fw {{ item.icon }}"></i>{% endif %}
             <span>{{ item.label|raw }}</span>
             {% if item.hasSubItems %}<i class="fa fa-fw fa-angle-right submenu-toggle-icon"></i>{% endif %}
         </a>

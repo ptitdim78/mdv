@@ -343,7 +343,6 @@
         firstName.push({{ review.firstname | json_encode(constant('JSON_UNESCAPED_UNICODE')) | raw }})
         lastName.push({{ review.lastname | json_encode(constant('JSON_UNESCAPED_UNICODE')) | raw }})
         {% endfor %}</script>
-
     <section class="section-wrapper">
         <div class="overlay">
             <div class="wrapper-block-clients">

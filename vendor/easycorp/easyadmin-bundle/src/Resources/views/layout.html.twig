@@ -1,7 +1,6 @@
-{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+ @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext
 {% trans_default_domain ea.i18n.translationDomain %}
 
-<!DOCTYPE html>
 <html lang="{{ ea.i18n.htmlLocale }}" dir="{{ ea.i18n.textDirection }}">
 <head>
     {% block head_metas %}
@@ -16,6 +15,11 @@
 
     {% block head_stylesheets %}
         <link rel="stylesheet" href="{{ asset('bundles/easyadmin/app.css') }}">
+        <link href="css/responsive.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"
+              type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+              integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {% endblock %}
 
     {% block configured_stylesheets %}
@@ -49,7 +53,7 @@
 </head>
 
 {% block body %}
-    <body id="{% block body_id %}{% endblock %}" class="ea {% block body_class %}{% endblock %}">
+    <body style="font-family: 'Open Sans Condensed';" id="{% block body_id %}{% endblock %}" class="ea {% block body_class %}{% endblock %}">
     {% block javascript_page_layout %}
         <script>
             document.body.classList.add(
@@ -76,9 +80,9 @@
 
                                 <div id="header-logo">
                                     {% block header_logo %}
-                                        <a class="logo {{ ea.dashboardTitle|length > 14 ? 'logo-long' }}" title="{{ ea.dashboardTitle|striptags }}" href="{{ path(ea.dashboardRouteName) }}">
+                                        <a class="logo" style="justify-content: center!important; display: flex; color: #6d509e" {{ ea.dashboardTitle|length > 14 ? 'logo-long' }}" title="{{ ea.dashboardTitle|striptags }}" href="{{ path(ea.dashboardRouteName) }}">
                                             {{ ea.dashboardTitle|raw }}
-                                        </a>
+                                        <img id="imgAdmin" style="width: 12%; padding-left: 3%" src="{{ '../images/ico/faviconmdv.ico' }}" alt="">
                                     {% endblock header_logo %}
                                 </div>
                             {% endblock header_navbar %}

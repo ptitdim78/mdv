@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Gallery;
 use App\Entity\Reviews;
 use App\Repository\ReviewsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use http\Env\Request;
 use http\Message;
+use PhpParser\Node\Stmt\Return_;
 use Psr\Container\ContainerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -57,6 +59,18 @@ class DefaultController extends AbstractController
     {
         return $this->render('default/mentions_legales.html.twig', [
             'controller_name' => 'DefaultController',
+        ]);
+    }
+
+    /**
+     * @Route ("/gallery", name="gallery")
+     */
+    public function gallery(): Response
+    {
+        $gallery = $this->getDoctrine()->getRepository(Gallery::class)->findBy([], ['id' => 'DESC']);
+
+        return $this->render('default/gallery.html.twig', [
+            'controller_name' => 'DefaultController', 'gallery' => $gallery,
         ]);
     }
 }

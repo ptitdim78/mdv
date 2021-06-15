@@ -6,6 +6,7 @@ use App\Repository\GalleryRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
@@ -39,6 +40,7 @@ class Gallery
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @var string
      */
     private $image;
 

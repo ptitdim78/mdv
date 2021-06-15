@@ -22,25 +22,24 @@ class GalleryCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-        return[
+        return [
             TextField::new('title'),
             TextareaField::new('description')->hideOnIndex(),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
             ImageField::new('image')->setBasePath('uploads/image/')->onlyOnIndex(),
             DateField::new('createdAt'),
             ChoiceField::new('domaine')->setChoices([
-                'Immobilier'=> 'Immobilier',
-                'Signaletique'=> 'Signaletique',
-                'Bache'=>'Bache',
-                'Marquage'=>'Marquage',
-                'Logo'=>'Logo'
+                'Immobilier' => 'Immobilier',
+                'Signalétique' => 'Signaletique',
+                'Bâche' => 'Bache',
+                'Marquage' => 'Marquage',
+                'Logo' => 'Logo'
             ])
         ];
     }
 
-    public function configureCrud(Crud $crud): Crud
+    public function configureCrud(Crud $crud) : Crud
     {
         return $crud->setDefaultSort(['createdAt'=>'DESC']);
     }
-
 }

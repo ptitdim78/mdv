@@ -20,6 +20,7 @@
 	display: none;
 }
 
+
 .productContainer{
 	display: flex;
 	flex-flow: wrap;
@@ -27,6 +28,7 @@
 	margin-bottom: 25px;
 	margin-top: 20px
 }
+
 
 .leMDV::first-letter{
 	color: #6d509e;

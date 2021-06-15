@@ -96,7 +96,7 @@ li {
 #titreSection {
     background-color: #6d509e;
     border-radius: 19px;
-    -webkit-box-shadow: 7px 6px 20px 0px rgba(109, 80, 158, 1);
+    -webkit-box-shadow: 7px 6px 20px 0 rgba(109, 80, 158, 1);
     width: 600px;
     padding: 6px;
     text-transform: uppercase;
@@ -191,7 +191,9 @@ a.btn-inverse:hover {
 }
 
 .hovicon.effect-1 {
-    background: #6d509e;
+    /*background: #6d509e;*/
+    width: 150px;
+    height: 155px;
 }
 
 .hovicon.effect-1:after {
@@ -200,7 +202,7 @@ a.btn-inverse:hover {
 
 /* Effect 1a */
 .hovicon.effect-1.sub-a:hover {
-    background: #6d509e;
+    /*background: #6d509e;*/
 }
 
 .main-color {

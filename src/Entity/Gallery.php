@@ -29,13 +29,12 @@ class Gallery
 
     /**
      * @ORM\Column(type="datetime")
-     * @var \DateTime
      */
     private $createdAt;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(max="255", maxMessage="Ce champs ne peut depasser 255 caractères")
+     * @Assert\Length(max="300", maxMessage="Ce champs ne peut depasser 300 caractères")
      */
     private $description;
 
@@ -123,7 +122,7 @@ class Gallery
         }
     }
 
-    public function getDomaine()
+    public function getDomaine(): ?string
     {
         return $this->domaine;
     }

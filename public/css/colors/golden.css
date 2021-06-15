@@ -5,10 +5,6 @@ a:link, a:visited, a:hover, a:focus {
     color: #C0A777;
 }
 
-.navbar-brand {
-    background: url("../../images/logo8.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-}
-
 /* Home Slider */
 #home-slider .caption h1 strong {
     color: #C0A777;

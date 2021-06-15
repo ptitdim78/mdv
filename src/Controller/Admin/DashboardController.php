@@ -2,13 +2,19 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Bache;
 use App\Entity\CoupDeCoeur;
 use App\Entity\FinDeSerie;
+use App\Entity\Gallery;
+use App\Entity\Immobilier;
+use App\Entity\Logo;
+use App\Entity\Marquage;
 use App\Entity\Products;
 use App\Entity\ProductsClothes;
 use App\Entity\Promo;
 use App\Entity\QrCode;
 use App\Entity\Reviews;
+use App\Entity\Signaletique;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -43,5 +49,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Promotion', 'fas fa-list', Promo::class);
         yield MenuItem::linkToCrud('Fin de série', 'fas fa-list', FinDeSerie::class);
         yield MenuItem::linkToCrud('QR code', 'fas fa-list', QrCode::class);
+        yield MenuItem::linkToCrud('Gallerie', 'fas fa-list', Gallery::class);
     }
 }

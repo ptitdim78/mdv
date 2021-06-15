@@ -1,11 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <!-- Contact Section -->
     <section class="section-wrapper" id="contacts">
-        <!-- Contacts -->
         <div class="contacts">
-            <!-- Block Title -->
             <div class="row">
                 <div class="container">
                     <div style="display: flex; justify-content: center" class="section-title wow fadeInDown"
@@ -16,7 +13,6 @@
                                 class="main-color"></span>Pour répondre à vos questions</h3>
                 </div>
             </div>
-            <!-- End Block Title -->
             <div class="container">
                 <div class="row">
                     <div class="wrapper-contacts">
@@ -51,18 +47,15 @@
                                 {% endfor %}
                             {% endfor %}
                             <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">
-                                <!-- Start contact-form -->
                                 <form id="contact-form" method="post" action="#">
                                     {{ form_start(form, {attr : {novalidate: 'novalidate'}}) }}
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             {{ form_row(form.firstname) }}
                                             {{ form_row(form.lastname) }}
-                                            {# <input type="text" name="name" class="form-control" placeholder="Your name"> #}
                                         </div>
                                         <div class="form-group">
                                             {{ form_row(form.mail) }}
-                                            {# <input type="email" name="email" class="form-control" placeholder="Your email address"> #}
                                         </div>
                                         <div class="form-group">
                                             {{ form_row(form.phone) }}
@@ -72,9 +65,7 @@
                                         <div class="form-group">
                                             {{ form_row(form.subject) }}
                                             {{ form_row(form.message, {attr: {rows:7}}) }}
-                                            {# <textarea  name="message" class="form-control" placeholder="Your message" rows="8"></textarea> #}
                                         </div>
-{#                                        <div id="output"></div>#}
                                         <div class="form-group">
                                             <input type="submit" class="" value="Envoyer">
                                         </div>
@@ -82,20 +73,15 @@
 
                                     <div style="text-align: justify" class="form-group col-md-12">
                                         {{ form_row(form.cookies) }}
-{#                                         <input style="caret-color: yellow" type="text" name="subject" class="form-control" placeholder="Subject">#}
                                     </div>
                                     {{ form_end(form) }}
                                 </form>
-                                <!-- End contact-form -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Contacts -->
-
     </section>
-    <!-- End Contact Section -->
 
 {% endblock %}

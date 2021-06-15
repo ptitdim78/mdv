@@ -9,6 +9,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=QrCodeRepository::class)
+ * @Vich\Uploadable
  */
 class QrCode
 {

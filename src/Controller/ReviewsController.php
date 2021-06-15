@@ -20,21 +20,21 @@ class ReviewsController extends AbstractController
     }
 
     /**
-     * @Route("/reviews", name="reviews")
+//     * @Route("/reviews", name="reviews")
      * @param Request $request
      * @return Response
      */
     public function index(Request $request): Response
     {
-        $reviews = new Reviews();
-        $form = $this->createForm(ReviewsType::class, $reviews)->handleRequest($request);
-
-        if($form->isSubmitted() && $form->isValid()){
-            $this->addFlash('success', 'Test réussi');
-            return $this->redirectToRoute('reviews');
-        }
-        return $this->render('reviews/index.html.twig', [
-            'form'=>$form->createView(), 'reviews'=>$reviews
-        ]);
+//        $reviews = new Reviews();
+//        $form = $this->createForm(ReviewsType::class, $reviews)->handleRequest($request);
+//
+//        if($form->isSubmitted() && $form->isValid()){
+//            $this->addFlash('success', 'Test réussi');
+//            return $this->redirectToRoute('reviews');
+//        }
+//        return $this->render('reviews/index.html.twig', [
+//            'form'=>$form->createView(), 'reviews'=>$reviews
+//        ]);
     }
 }

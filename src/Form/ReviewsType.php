@@ -21,37 +21,37 @@ class ReviewsType extends AbstractType
     {
         $roles = ['role1', 'role2', 'role3'];
 
-        $builder
-            ->add('firstname',  TextType::class,[
-                'constraints'=> new Length([
-                    'min'=>3,
-                    'max'=>108,
-                ]),
-                'label'=>'Nom',
-                'attr'=>[
-                    'placeholder'=>'Saisir votre nom'
-                ]
-            ])
-            ->add('lastname', TextType::class, [
-                'constraints'=> new Length([
-                    'min'=>3,
-                    'max'=>108,
-                ]),
-                'label'=>'Prénom',
-                'attr'=>[
-                    'placeholder'=>'Saisir votre prénom'
-                ]
-            ])
-            ->add('message', TextareaType::class,[
-                'label'=>'Message',
-                'attr'=>[
-                    'placeholder'=>'Saisir votre message'
-                ]
-            ])
-            ->add('rating', IntegerType::class,[
-                'label'=>'Note',
-            ])
-        ;
+//        $builder
+//            ->add('firstname',  TextType::class,[
+//                'constraints'=> new Length([
+//                    'min'=>3,
+//                    'max'=>108,
+//                ]),
+//                'label'=>'Nom',
+//                'attr'=>[
+//                    'placeholder'=>'Saisir votre nom'
+//                ]
+//            ])
+//            ->add('lastname', TextType::class, [
+//                'constraints'=> new Length([
+//                    'min'=>3,
+//                    'max'=>108,
+//                ]),
+//                'label'=>'Prénom',
+//                'attr'=>[
+//                    'placeholder'=>'Saisir votre prénom'
+//                ]
+//            ])
+//            ->add('message', TextareaType::class,[
+//                'label'=>'Message',
+//                'attr'=>[
+//                    'placeholder'=>'Saisir votre message'
+//                ]
+//            ])
+//            ->add('rating', IntegerType::class,[
+//                'label'=>'Note',
+//            ])
+//        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

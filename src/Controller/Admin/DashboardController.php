@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\CoupDeCoeur;
 use App\Entity\FinDeSerie;
+use App\Entity\Gallery;
 use App\Entity\Products;
 use App\Entity\ProductsClothes;
 use App\Entity\Promo;

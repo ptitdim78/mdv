@@ -1,0 +1,145 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <style>
+        .test{
+            max-width: 20%;
+            display: inline-block;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="element-title">
+                <h1 id="titreSection" class="main-color wow fadeInUp" data-wow-duration="1s"
+                    data-wow-delay="300ms">
+                    Nos réalisations </h1>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 50px">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus distinctio dolore,
+                dolorem enim, eos ipsum mollitia necessitatibus nisi nobis numquam pariatur praesentium, quaerat
+                quam quas quia quibusdam soluta vitae.
+            </h3>
+        </div>
+        <div class="row">
+            <div class="row" style="margin-bottom: 50px;">
+                <div class="element-title">
+                    <h1 id="titreSection" class="main-color wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay="300ms">
+                        Signalétique </h1>
+                </div>
+            </div>
+            <div class="row">
+                {% for creation in gallery %}
+                    {% if creation.domaine == 'Signaletique' %}
+                        <div class="col-md-3">
+                            <div class="thumbnail" style="height: 450px">
+                                <img src="{{ 'https://via.placeholder.com/700x600' }}" alt="...">
+                                <div class="caption">
+                                    <h3>{{ creation.title }}</h3>
+                                    <p>{{ creation.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="row" style="margin-bottom: 50px;">
+                <div class="element-title">
+                    <h1 id="titreSection" class="main-color wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay="300ms">
+                        Immobilier </h1>
+                </div>
+            </div>
+            <div class="container productContainer">
+                {% for creation in gallery %}
+                    {% if creation.domaine == 'Immobilier' %}
+                        <div class="col-sm-3 col-md-3">
+                            <div class="thumbnail">
+                                <img src="{{ vich_uploader_asset(creation, 'imageFile') }}" alt="...">
+                                <div class="caption">
+                                    <h3>{{ creation.title }}</h3>
+                                    <p>{{ creation.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="row" style="margin-bottom: 50px;">
+                <div class="element-title">
+                    <h1 id="titreSection" class="main-color wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay="300ms">
+                        Bâche </h1>
+                </div>
+            </div>
+            <div class="container productContainer">
+                {% for creation in gallery %}
+                    {% if creation.domaine == 'Bache' %}
+                        <div class="col-sm-3 col-md-3">
+                            <div class="thumbnail">
+                                <img src="{{ vich_uploader_asset(creation, 'imageFile') }}" alt="...">
+                                <div class="caption">
+                                    <h3>{{ creation.title }}</h3>
+                                    <p>{{ creation.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="row" style="margin-bottom: 50px;">
+                <div class="element-title">
+                    <h1 id="titreSection" class="main-color wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay="300ms">
+                        Marquage </h1>
+                </div>
+            </div>
+            <div class="container productContainer">
+                {% for creation in gallery %}
+                    {% if creation.domaine == 'Marquage' %}
+                        <div class="col-sm-3 col-md-3">
+                            <div class="thumbnail">
+                                <img src="{{ vich_uploader_asset(creation, 'imageFile') }}" alt="...">
+                                <div class="caption">
+                                    <h3>{{ creation.title }}</h3>
+                                    <p>{{ creation.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="row" style="margin-bottom: 50px;">
+                <div class="element-title">
+                    <h1 id="titreSection" class="main-color wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay="300ms">
+                        Logo </h1>
+                </div>
+            </div>
+            <div class="container productContainer">
+                {% for creation in gallery %}
+                    {% if creation.domaine == 'Logo' %}
+                        <div class="col-sm-3 col-md-3">
+                            <div class="thumbnail">
+                                <img src="{{ vich_uploader_asset(creation, 'imageFile') }}" alt="...">
+                                <div class="caption">
+                                    <h3>{{ creation.title }}</h3>
+                                    <p>{{ creation.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

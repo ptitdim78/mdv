@@ -49,18 +49,27 @@ window.onload = function carousel() {
 
     h51.className = "name";
     p.innerHTML = newAvis;
+    if (newLastName == null){
+        newLastName = ''
+    }
     h51.innerHTML = newFirstName + ' ' + newLastName;
     document.getElementById("pAvis").appendChild(p);
     document.getElementById('name').appendChild(h51);
 
     h52.className = "name";
     p2.innerHTML = newAvis2;
+    if (newLastName2 == null){
+        newLastName2 = ''
+    }
     h52.innerHTML = newFirstName2 + ' ' + newLastName2
     document.getElementById("pAvis2").appendChild(p2);
     document.getElementById('name2').appendChild(h52);
 
     h53.className = "name";
     p3.innerHTML = newAvis3;
+    if (newLastName3 == null){
+        newLastName3 = ''
+    }
     h53.innerHTML = newFirstName3 + ' ' + newLastName3
     document.getElementById("pAvis3").appendChild(p3);
     document.getElementById('name3').appendChild(h53);

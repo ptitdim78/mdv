@@ -23,7 +23,8 @@ class Gallery
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=41)
+     * @Assert\Length(max="41", maxMessage="Ce champs ne peut depasser 41 caractères")
      */
     private $title;
 
@@ -33,13 +34,13 @@ class Gallery
     private $createdAt;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(max="300", maxMessage="Ce champs ne peut depasser 300 caractères")
+     * @ORM\Column(type="string", length=115, nullable=true)
+     * @Assert\Length(max="115", maxMessage="Ce champs ne peut depasser 115 caractères")
      */
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
     private $image;

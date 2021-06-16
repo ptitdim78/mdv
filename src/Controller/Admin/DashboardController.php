@@ -39,7 +39,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Gestion objet boutique', 'fas fa-list', Products::class);
         yield MenuItem::linkToCrud('Gestion textile boutique', 'fas fa-list', ProductsClothes::class);
         yield MenuItem::linkToCrud('Avis client', 'fas fa-list', Reviews::class);
-        yield MenuItem::linkToCrud('Utilisateur', 'fas fa-list', User::class);
         yield MenuItem::linkToCrud('Coup de coeur', 'fas fa-list', CoupDeCoeur::class);
         yield MenuItem::linkToCrud('Promotion', 'fas fa-list', Promo::class);
         yield MenuItem::linkToCrud('Fin de série', 'fas fa-list', FinDeSerie::class);

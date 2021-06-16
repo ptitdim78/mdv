@@ -35,8 +35,10 @@
                     <li><a class="navLetter" href="{{ path ('gallery') }}">Gallerie photo</a></li>
                     <li><a class="navLetter" href="{{ path ('a_propos') }}">À propos</a></li>
                     <li><a class="navLetter" href="{{ path ('contact') }}">Contact</a></li>
-                    {# <li><a href="#"></a></li> #}
-                    {# <li><a href="#">Contact</a></li> #}
+                    {% if is_granted ('ROLE_ADMIN') %}
+                    <li><a href="{{ path('gestion_admin') }}"><i class="fa fa-cog"></i> Gestion Admin</a></li>
+                    <li><a href="{{ path ('app_logout') }}"><i class="fa fa-times-circle"></i> Déconnection</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

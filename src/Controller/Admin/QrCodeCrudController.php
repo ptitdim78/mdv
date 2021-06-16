@@ -19,7 +19,7 @@ class QrCodeCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile')->setFormType(VichImageType::class)->hideOnIndex()->setFormTypeOption('allow_delete', false),
             ImageField::new('image')->setBasePath('uploads/image/')->onlyOnIndex(),
         ];
     }

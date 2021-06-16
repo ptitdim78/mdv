@@ -19,10 +19,7 @@
                 {% else %}
                     -  <a href="{{ path ('app_login') }}"><i class="fa fa-user"></i></a>
                 {% endif %}
-                {% if is_granted ('ROLE_ADMIN') %}
-                <a href="{{ path('gestion_admin') }}"> - <i class="fa fa-cog"></i></a>
-                <a href="{{ path ('app_logout') }}"> - <i class="fa fa-times-circle"></i></a></p>
-                {% endif %}
+
         </div>
     </div>
 </div>

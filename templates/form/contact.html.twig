@@ -78,6 +78,22 @@
                                 </form>
                             </div>
                         </div>
+                        <div class="contact_form">
+                            <div style="justify-content: center">
+                                <blockquote>Plus qu'un pas, votre avis nous remplit de joie</blockquote>
+                                {% for QrCodes in QrCode %}
+                                    <img src="{{ vich_uploader_asset(QrCodes, 'imageFile') }}" alt="QR code"
+                                         width="200px;" style="margin: 15px">
+                                {% endfor %}
+                                <div>
+                                    <p>En numérisant ce QR code avec votre téléphone (option photo ou caméra), vous allez
+                                        être dirigé vers notre présence "Google Map" et vous pourrez nous laisser votre
+                                        avis, merci pour l'intérêt que vous nous portez et au plaisir d'un prochain
+                                        échange,</p>
+                                    <p>Votre dévoué, #DavidMesmacque</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

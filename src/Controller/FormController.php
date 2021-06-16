@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
+use App\Entity\QrCode;
 use App\Form\ContactType;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,6 +25,7 @@ class FormController extends AbstractController
     public function contact(Request $request, MailerInterface $mailer): Response
     {
         $contact = new Contact();
+        $QrCode = $this->getDoctrine()->getRepository(QrCode::class)->findAll();
         $form = $this->createForm(ContactType::class, $contact)->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $email = (new TemplatedEmail())
@@ -47,6 +49,7 @@ class FormController extends AbstractController
         }
         return $this->render('form/contact.html.twig', [
             'form' => $form->createView(),
+            'QrCode'=> $QrCode
         ]);
     }
 }

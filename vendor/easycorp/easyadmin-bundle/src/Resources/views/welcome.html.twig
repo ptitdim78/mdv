@@ -20,9 +20,10 @@
             font-size: 20px;
             text-align: center;
         }
-        h1{
+        h1, h2{
             text-align: center;
             font-weight: bold;
+            text-transform: uppercase;
         }
         img{
             width: 35%;
@@ -30,55 +31,81 @@
         .imgAdmin{
             display: flex;
             justify-content: center;
+            margin-bottom: 10px;
         }
     </style>
 
     <body>
-    <div class="container">
-        <div>
-            <h1>COMMENT S'INSCRIRE ?</h1>
-        </div>
-        <div>
-            <p id="pMenuAdmin">Dans l'URL copiez-collez le lien suivant : https://www.lemoutondesvilles.fr/creer. Vous indiquerez ensuite votre adresse mail, et votre mot de passe dans les espaces prévus a cet
-                effet.</p>
-            <div class="imgAdmin">
-                <img src="{{ '../images/InscriptionAdmin.PNG' }}" alt="">
+        <div class="container">
+            <div>
+                <hr>
+                <h1 style="color:  #6d509e">DOCUMENTATION DU SITE</h1>
+                <hr>
             </div>
-            <p style="color: red; font-weight: bold"> Attention il vous sera impossible de modifer votre mot de passe
-                par la suite, vérifié à ne pas faire de fautes et à ne pas l'oublier.</p>
-        </div>
-        <div>
-            <h1>COMMENT SE CONNECTER ?</h1>
-        </div>
-        <div>
-            <p>Dirigez-vous tout en bas de n'importe quelle page du site</p>
-            <div class="imgAdmin">
-                <img src="{{ '../images/CommentSeConncter.PNG' }}" alt="">
+            <div>
+                <h2>COMMENT S'INSCRIRE ?</h2>
             </div>
-            <p>Cliquez sur la petite icone à droite de "Mentions légales". Celle-ci <i style="color: #6d509e"
-                                                                                       class="fas fa-arrow-right"></i>
-                <i style="color: #6d509e" class="fa fa-user"></i></p>
-            <p>Remplissez les champs avec les informations que vous avez préalablement créées</p>
-            <div class="imgAdmin">
-                <img src="{{ '../images/connexionAdmin.PNG' }}" alt="">
+            <div>
+                <p id="pMenuAdmin">Dans l'URL copiez-collez le lien suivant : https://www.lemoutondesvilles.fr/creer.
+                    <br>Vous renseignerez ensuite votre adresse mail et votre mot de passe.</p>
+                <div class="imgAdmin">
+                    <img src="{{ '../images/admin/admin.PNG' }}" alt="inscription">
+                </div>
+                <p style="color: red; font-weight: bold"><i class="fas fa-exclamation-triangle"></i> Il vous sera impossible de modifer votre mot de passe
+                    par la suite, pensez à le noter précieusement</p>
             </div>
-            <p>Vous serez alors redirigé vers l'accueil</p>
-        </div>
-        <div>
-            <h1>COMMENT REJOINDRE L'ADMINISTRATION DU SITE</h1>
-        </div>
-        <div>
-            <p>Deux nouvelles icones vont alors apparaîtrent en bas de page</p>
-            <div class="imgAdmin">
-                <img src="{{ '../images/administrationAdmin.PNG' }}" alt="">
+            <div>
+                <hr>
+                <h2>COMMENT SE CONNECTER ?</h2>
             </div>
-            <p>L'engrenage <i style="color: #6d509e" class="fa fa-cog"></i> qui servira à atteindre la partie
-                Administration du site. Vous pourrez, une fois connecté
-                atteindre cette partie directement en cliquant dessus ou alors en tapant directement
-                https://www.lemontondesvilles.fr/gestion_admin dans l'URL</p>
-            <p>Et la croix <i  style="color: #6d509e" class="fa fa-times-circle"></i> qui sert à se deconnecter.</p>
+            <div>
+                <p>Dirigez-vous tout en bas de n'importe quelle page du site</p>
+                <div class="imgAdmin">
+                    <img src="{{ '../images/admin/admin1.PNG' }}" alt="connexion">
+                </div>
+                <p>Cliquez sur l'icone à droite de "Mentions légales" en bas de page.
+                    <i style="color: #6d509e" class="fa fa-user"></i></p>
+                <p>Remplissez les champs avec les informations que vous avez préalablement créées</p>
+                <div class="imgAdmin">
+                    <img src="{{ '../images/admin/admin2.PNG' }}" alt="connexion">
+                </div>
+                <p>Vous serez alors redirigé vers la page d'accueil</p>
+            </div>
+            <hr>
+            <div>
+                <h2>COMMENT REJOINDRE L'ADMINISTRATION DU SITE</h2>
+            </div>
+            <div>
+                <p>Deux nouveaux liens seront disponibles dans la barre de navigation</p>
+                <div class="imgAdmin">
+                    <img src="{{ '../images/admin/admin3.PNG' }}" alt="administation" width="180px">
+                </div>
+                <p><i style="color: #6d509e" class="fa fa-cog"></i> Gestion Admin qui servira à atteindre la partie
+                    Administration du site.</p>
+                <p><i  style="color: #6d509e" class="fa fa-times-circle"></i>Pour se déconnecter.</p>
+            </div>
+            <hr>
+            <div>
+                <h2>Comment faire sa gestion du contenu</h2>
+            </div>
+            <div>.
+                <p>Vous avez ici un accès à chaque contenu que vous souhaitez créer/modifier/supprimer.</p>
+                <p>Vous avez un lien qui vous permet de retourner vers le site</p>
+                <div class="imgAdmin">
+                    <img src="{{ '../images/admin/admin4.PNG' }}" alt="menu admin" width="180px">
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h2>Gérer du contenu</h2>
+            </div>
+            <div>.
+                <p>Losque vous selectionner le créer/modifier/supprimer.</p>
+                <p>Vous avez un lien qui vous permet de retourner vers le site</p>
+                <div class="imgAdmin">
+                    <img src="{{ '../images/admin/admin5.PNG' }}" alt="menu admin" width="180px">
+                </div>
+            </div>
         </div>
-    </div>
-
     </body>
 {% endblock %}

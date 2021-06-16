@@ -5,6 +5,9 @@ namespace App\Controller\Admin;
 use App\Entity\Products;
 use Doctrine\DBAL\Types\BooleanType;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
+use EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext;
+use EasyCorp\Bundle\EasyAdminBundle\Contracts\Menu\MenuItemInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
@@ -27,7 +30,7 @@ class ProductsCrudController extends AbstractCrudController
         return [
             TextField::new('title'),
             TextareaField::new('description')->hideOnIndex(),
-            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile')->setFormType(VichImageType::class)->hideOnIndex()->setFormTypeOption('allow_delete', false),
             ImageField::new('image')->setBasePath('uploads/image/')->onlyOnIndex(),
             TextField::new('hauteur')->hideOnIndex(),
             TextField::new('longueur')->hideOnIndex(),

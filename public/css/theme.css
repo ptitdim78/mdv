@@ -16,6 +16,40 @@
 /*************************
 *******Typography******
 **************************/
+.tailleThumbnail {
+	min-height: 96% !important;
+}
+
+.imgThumbnailGallery {
+	height: 200px !important;
+	width: 250px !important;
+}
+
+.tailleThumbnail:hover{
+	transform: scale(1.4);
+	z-index: 8000!important;
+	position: absolute;
+}
+.captionGallery {
+	text-align: center;
+}
+
+.titleGallery {
+	width: 100%;
+	padding: 2%;
+	border-block: solid 1px #6d509e;
+	font-size: larger;
+}
+
+.descriptionGallery {
+	padding-inline: 5%;
+}
+
+.descriptionGallery::first-letter {
+	color: #6d509e;
+	font-size: x-large;
+}
+
 .filtreVitrine{
 	display: none;
 }

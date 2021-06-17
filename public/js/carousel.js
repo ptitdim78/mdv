@@ -3,11 +3,9 @@ window.onload = function carousel() {
     let message = document.getElementById('message')
 
     if (document.getElementById("message") != null) {
-
         avis = document.getElementById("avis");
         message = document.getElementById('message')
         avis.removeChild(message);
-
     }
 
     let avisNumber1 = Math.floor(Math.random() * messages.length);

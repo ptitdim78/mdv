@@ -24,9 +24,13 @@
                 {% if creation.domaine == 'Signaletique' %}
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="thumbnail tailleThumbnail">
-                            <img id="imgGallery" class="imgThumbnailGallery"
-                                 src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                 alt="...">
+                            {% if creation.image !=null %}
+                                <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
+                                     alt="gallerie signalétique">
+                            {% else %}
+                                <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
+                                     alt="gallerie signalétique">
+                            {% endif %}
                             <div class="caption captionGallery" style="padding: 0!important;">
                                 <h3 class="titleGallery">{{ creation.title }}</h3>
                             </div>
@@ -55,8 +59,13 @@
                 {% if creation.domaine == 'Bache' %}
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="thumbnail tailleThumbnail">
+                            {% if creation.image !=null %}
                             <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                 alt="...">
+                                 alt="gallerie bâche">
+                            {% else %}
+                                <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
+                                     alt="gallerie bâche">
+                            {% endif %}
                             <div class="caption captionGallery" style="padding: 0!important;">
                                 <h3 class="titleGallery">{{ creation.title }}</h3>
                             </div>
@@ -85,8 +94,13 @@
                 {% if creation.domaine == 'Marquage' %}
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="thumbnail tailleThumbnail">
-                            <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                 alt="...">
+                            {% if creation.image !=null %}
+                                <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
+                                     alt="gallerie marquage">
+                            {% else %}
+                                <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
+                                     alt="gallerie marquage">
+                            {% endif %}
                             <div class="caption captionGallery" style="padding: 0!important;">
                                 <h3 class="titleGallery">{{ creation.title }}</h3>
                             </div>
@@ -115,8 +129,13 @@
                 {% if creation.domaine == 'Logo' %}
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="thumbnail tailleThumbnail">
-                            <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                 alt="...">
+                            {% if creation.image !=null %}
+                                <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
+                                     alt="gallerie logo">
+                            {% else %}
+                                <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
+                                     alt="gallerie logo">
+                            {% endif %}
                             <div class="caption captionGallery" style="padding: 0!important;">
                                 <h3 class="titleGallery">{{ creation.title }}</h3>
                             </div>
@@ -145,8 +164,13 @@
                 {% if creation.domaine == 'Immobilier' %}
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="thumbnail tailleThumbnail">
-                            <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                 alt="...">
+                            {% if creation.image !=null %}
+                                <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
+                                     alt="gallerie immobilier">
+                            {% else %}
+                                <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
+                                     alt="gallerie immobilier">
+                            {% endif %}
                             <div class="caption captionGallery" style="padding: 0!important;">
                                 <h3 class="titleGallery">{{ creation.title }}</h3>
                             </div>

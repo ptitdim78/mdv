@@ -22,14 +22,13 @@
                                          data-wow-delay="1100ms">
                                         <div style="height: 300px" id="imageProduit">
                                             {% if produit.image !=null %}
-                                                <img style="height: 100%; width: 100%" src="{{ vich_uploader_asset(produit, 'imageFile') }}"
-                                                     alt="image produit objet">
+                                                <a href="{{produit.lien }}" target="_blank"><img style="height: 100%; width: 100%" src="{{ vich_uploader_asset(produit, 'imageFile') }}"
+                                                                                 alt="image produit objet">
+                                                </a>
                                             {% else %}
                                                 <img style="height: 100%; width: 100%" src="{{ asset('images/affiche.png') }}"
                                                      alt="image produit objet">
                                             {% endif %}
-                                            <a href="{{produit.lien }}">
-                                            </a>
                                         </div>
                                     </div>
                                     <div style="min-height: 410px; text-align: justify; padding: 5%" id="tailleDescProduits">
@@ -98,14 +97,14 @@
                                      data-wow-delay="1100ms">
                                     <div style="height: 300px" id="imageProduit">
                                         {% if produitC.image !=null %}
-                                            <img style="height: 100%; width: 100%" src="{{ vich_uploader_asset(produitC, 'imageFile') }}"
-                                                 alt="image produit vetements">
+                                            <a href="{{ produitC.lien }}" target="_blank"><img style="height: 100%; width: 100%" src="{{ vich_uploader_asset(produitC, 'imageFile') }}"
+                                                                               alt="image produit vetements">
+                                            </a>
                                         {% else %}
                                             <img style="height: 100%; width: 100%" src="{{ asset('images/affiche.png') }}"
                                                  alt="image produit vetements">
                                         {% endif %}
-                                        <a href="{{ produitC.lien }}">
-                                        </a>
+
                                     </div>
                                 </div>
                                     <div style="min-height: 410px; text-align: justify;  word-wrap: break-word; padding: 5%">
@@ -169,14 +168,15 @@
                         <div class="col-lg-6 col-md-6 partners-img wow fadeInRight" style="margin-bottom: 25px"
                              data-wow-duration="1s"
                              data-wow-delay="300ms">
-                            <p class="shop" id="white">Objets/goodies</p><img id="realisation"
-                                                                              src="{{ '../images/schwarz-wolf2.png' }}" alt="Schwarz-wolf boutique">
+                            <p class="shop" id="white">Objets/goodies</p>
+                            <a href="http://www.lemoutondesvilles-objets.com/nouveaux-produits" target="_blank"><img id="realisation" src="{{ '../images/schwarz-wolf2.png' }}" alt="Schwarz-wolf boutique"></a>
 
                         </div>
                         <div class="col-lg-6 col-md-6 partners-img wow fadeInRight"
                              data-wow-duration="1s"
                              data-wow-delay="500ms">
-                            <p class="shop" id="white">Textile</p><img id="realisation" src="{{ '../images/galimard1.png' }}" alt="Galimard">
+                            <p class="shop" id="white">Textile</p>
+                            <a href="https://textile-communication.com/LEMOUTONDESVILLES/catalog/" target="_blank"><img id="realisation" src="{{ '../images/galimard1.png' }}" alt="Galimard"></a>
                         </div>
                     </div>
                 </div>

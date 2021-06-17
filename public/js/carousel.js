@@ -1,9 +1,13 @@
 window.onload = function carousel() {
+    let avis = document.getElementById("avis");
+    let message = document.getElementById('message')
 
     if (document.getElementById("message") != null) {
-        let avis = document.getElementById("avis");
-        let message = document.getElementById('message')
+
+        avis = document.getElementById("avis");
+        message = document.getElementById('message')
         avis.removeChild(message);
+
     }
 
     let avisNumber1 = Math.floor(Math.random() * messages.length);
@@ -76,37 +80,40 @@ window.onload = function carousel() {
 }
 
 function tous() {
-    id1 = document.getElementById('1')
-    id2 = document.getElementById('2')
-    id3 = document.getElementById('3')
-    idAll = [id1, id2, id3]
+    let id1 = document.getElementById('1')
+    let id2 = document.getElementById('2')
+    let id3 = document.getElementById('3')
+    let idAll = [id1, id2, id3]
     idAll.forEach(function (id) {
         id.classList.remove('filtreVitrine')
-        id2.classList = 'facts parallax'
-    });
+
+    })
+    id2.classList.add('facts parallax')
 }
+
 function coeur(){
-    id1 = document.getElementById('1')
-    id2 = document.getElementById('2')
-    id3 = document.getElementById('3')
+    let id1 = document.getElementById('1')
+    let id2 = document.getElementById('2')
+    let id3 = document.getElementById('3')
     id1.classList.remove('filtreVitrine')
-    id2.classList = 'filtreVitrine'
-    id3.classList = 'filtreVitrine'
+    id2.classList.add('filtreVitrine')
+    id3.classList.add('filtreVitrine')
 }
+
 function promo(){
-    id1 = document.getElementById('1')
-    id2 = document.getElementById('2')
-    id3 = document.getElementById('3')
-    id1.classList = 'filtreVitrine'
+    let id1 = document.getElementById('1')
+    let id2 = document.getElementById('2')
+    let id3 = document.getElementById('3')
+    id1.classList.add('filtreVitrine')
+    id3.classList.add('filtreVitrine')
     id2.classList.remove('filtreVitrine')
-    id2.classList = 'facts parallax'
-    id3.classList = 'filtreVitrine'
+    id2.classList.add('facts parallax')
 }
 function fds(){
-    id1 = document.getElementById('1')
-    id2 = document.getElementById('2')
-    id3 = document.getElementById('3')
-    id1.classList = 'filtreVitrine'
-    id2.classList = 'filtreVitrine'
+    let id1 = document.getElementById('1')
+    let id2 = document.getElementById('2')
+    let id3 = document.getElementById('3')
+    id1.classList.add('filtreVitrine')
+    id2.classList.add('filtreVitrine')
     id3.classList.remove('filtreVitrine')
 }

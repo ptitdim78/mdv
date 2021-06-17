@@ -28,7 +28,7 @@ class PromoCrudController extends AbstractCrudController
             TextField::new('imageFile')->setFormType(VichImageType::class)->hideOnIndex()->setFormTypeOption('allow_delete', false),
             ImageField::new('image')->setBasePath('uploads/image/')->onlyOnIndex(),
             BooleanField::new('online'),
-            TextField::new('remise'),
+            TextField::new('remise')->setFormTypeOption( 'empty_data', ''),
             DateField::new('createdAt')
         ];
     }

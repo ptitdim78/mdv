@@ -20,7 +20,7 @@ class ReviewsCrudController extends AbstractCrudController
     {
         return [
             TextField::new('firstname'),
-            TextField::new('lastname'),
+            TextField::new('lastname')->setFormTypeOption( 'empty_data', ''),
             TextareaField::new('message')->hideOnIndex(),
             ChoiceField::new('rating')->setChoices([
                 '0' => '0',

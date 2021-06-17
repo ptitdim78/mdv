@@ -24,7 +24,7 @@ class GalleryCrudController extends AbstractCrudController
     {
         return [
             TextField::new('title'),
-            TextareaField::new('description')->hideOnIndex(),
+            TextareaField::new('description')->hideOnIndex()->setFormTypeOption( 'empty_data', ''),
             TextField::new('imageFile')->setFormType(VichImageType::class)->hideOnIndex()->setFormTypeOption('allow_delete', false),
             ImageField::new('image')->setBasePath('uploads/image/')->onlyOnIndex(),
             DateField::new('createdAt'),

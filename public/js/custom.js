@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
 	}
 	
 	/* WOW */
-	var wow = new WOW(
+	let wow = new WOW(
 	  {
 		boxClass:     'wow',      // animated element css class (default is wow)
 		animateClass: 'animated', // animation css class (default is animated)
@@ -34,10 +34,10 @@ jQuery(document).ready(function() {
 	$("a[data-rel^='prettyPhoto']").prettyPhoto();
 
 	/* main-slider */
-	var slideHeight = $(window).height();
+	let slideHeight = $(window).height();
 	$('#home-slider .item').css('height',slideHeight);
 
-	$(window).resize(function(){'use strict',
+	$(window).resize(function(){'use strict'
 		$('#home-slider .item').css('height',slideHeight);
 	});
 	
@@ -48,7 +48,7 @@ jQuery(document).ready(function() {
 	
 	// Nice scroll Navbar
 	$('.navbar-nav li a').click(function(evt){
-		var place = $(this).attr('href');
+		let place = $(this).attr('href');
 		$('html, body').animate({
 			scrollTop: $(place).offset().top
 			}, 1200, 'easeInOutCubic');
@@ -57,7 +57,7 @@ jQuery(document).ready(function() {
 	
 	// Nice scroll Learn More
 	$('.learn-more').click(function(evt){
-		var place = $(this).attr('href');
+		let place = $(this).attr('href');
 		$('html, body').animate({
 			scrollTop: $(place).offset().top
 			}, 1200, 'easeInOutCubic');
@@ -67,7 +67,7 @@ jQuery(document).ready(function() {
 	/* Nav Bar Effect */
 	$(window).scroll(function(){	
 		"use strict";	
-		var scroll = $(window).scrollTop();
+		let scroll = $(window).scrollTop();
 		if( scroll > 60 ){		
 			$(".navbar-wrapper").addClass("scroll-fixed-navbar");				
 		} else {
@@ -92,8 +92,8 @@ jQuery(document).ready(function() {
 ================================= */
 $('.skills').waypoint(function() {
 	$('.knob').each(function () {
-          var element = $(this);
-          var perc = element.attr("value");  
+          let element = $(this);
+          let perc = element.attr("value");
           element.knob({ 
                 'value': 0,
 				'width': 200,			   
@@ -184,7 +184,7 @@ $('.skills').waypoint(function() {
     // Setup form validation on the #register-form element
     $('#sign-form').validate({
 
-		errorPlacement : function(error, element) {
+		errorPlacement : function(error,) {
 				$('#signup-error').append(error)
 			},    
 			
@@ -222,8 +222,8 @@ $('.skills').waypoint(function() {
 	// Team Profile
 	$('#team').on('click','.profile-read-more',function(event){
 		event.preventDefault();
-		var link = $(this).data('single_url');
-		var full_url = '#team-single-wrap',
+		let link = $(this).data('single_url');
+		let full_url = '#team-single-wrap',
 		parts = full_url.split("#"),
 		trgt = parts[1],
 		target_top = $("#"+trgt).offset().top - 85;
@@ -239,7 +239,7 @@ $('.skills').waypoint(function() {
 	// Close Team Profile
 	$('#team-single-wrap').on('click', '.close-folio-item',function(event) {
 		event.preventDefault();
-		var full_url = '#team',
+		let full_url = '#team',
 		parts = full_url.split("#"),
 		trgt = parts[1],
 		target_offset = $("#"+trgt).offset(),
@@ -252,8 +252,8 @@ $('.skills').waypoint(function() {
 	// Work Single View
 	$('#works').on('click','.folio-read-more',function(event){
 		event.preventDefault();
-		var link = $(this).data('single_url');
-		var full_url = '#works-single-wrap',
+		let link = $(this).data('single_url');
+		let full_url = '#works-single-wrap',
 		parts = full_url.split("#"),
 		trgt = parts[1],
 		target_top = $("#"+trgt).offset().top - 85;
@@ -269,7 +269,7 @@ $('.skills').waypoint(function() {
 	// Close Portfolio Single View
 	$('#works-single-wrap').on('click', '.close-folio-item',function(event) {
 		event.preventDefault();
-		var full_url = '#works',
+		let full_url = '#works',
 		parts = full_url.split("#"),
 		trgt = parts[1],
 		target_offset = $("#"+trgt).offset(),

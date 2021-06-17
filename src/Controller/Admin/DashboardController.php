@@ -10,7 +10,6 @@ use App\Entity\ProductsClothes;
 use App\Entity\Promo;
 use App\Entity\QrCode;
 use App\Entity\Reviews;
-use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;

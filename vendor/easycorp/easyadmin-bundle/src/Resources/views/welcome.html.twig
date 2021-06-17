@@ -1,4 +1,4 @@
-{#@var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext#}
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
 {% extends '@EasyAdmin/page/content.html.twig' %}
 
 {% block page_title 'Documentation le mouton des villes !' %}
@@ -6,11 +6,12 @@
 {% block page_content %}
 
     <style>
-        .container{
+        .container {
             padding-left: 15px;
             padding-right: 15px;
             margin: auto;
         }
+
         .title {
             text-transform: uppercase;
             font-weight: bold;
@@ -20,15 +21,18 @@
             font-size: 20px;
             text-align: center;
         }
-        h1, h2{
+
+        h1, h2 {
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
         }
-        img{
+
+        img {
             width: 35%;
         }
-        .imgAdmin{
+
+        .imgAdmin {
             display: flex;
             justify-content: center;
             margin-bottom: 10px;
@@ -36,76 +40,143 @@
     </style>
 
     <body>
-        <div class="container">
-            <div>
-                <hr>
-                <h1 style="color:  #6d509e">DOCUMENTATION DU SITE</h1>
-                <hr>
-            </div>
-            <div>
-                <h2>COMMENT S'INSCRIRE ?</h2>
-            </div>
-            <div>
-                <p id="pMenuAdmin">Dans l'URL copiez-collez le lien suivant : https://www.lemoutondesvilles.fr/creer.
-                    <br>Vous renseignerez ensuite votre adresse mail et votre mot de passe.</p>
-                <div class="imgAdmin">
-                    <img src="{{ '../images/admin/admin.PNG' }}" alt="inscription">
-                </div>
-                <p style="color: red; font-weight: bold"><i class="fas fa-exclamation-triangle"></i> Il vous sera impossible de modifer votre mot de passe
-                    par la suite, pensez à le noter précieusement</p>
-            </div>
-            <div>
-                <hr>
-                <h2>COMMENT SE CONNECTER ?</h2>
-            </div>
-            <div>
-                <p>Dirigez-vous tout en bas de n'importe quelle page du site</p>
-                <div class="imgAdmin">
-                    <img src="{{ '../images/admin/admin1.PNG' }}" alt="connexion">
-                </div>
-                <p>Cliquez sur l'icone à droite de "Mentions légales" en bas de page.
-                    <i style="color: #6d509e" class="fa fa-user"></i></p>
-                <p>Remplissez les champs avec les informations que vous avez préalablement créées</p>
-                <div class="imgAdmin">
-                    <img src="{{ '../images/admin/admin2.PNG' }}" alt="connexion">
-                </div>
-                <p>Vous serez alors redirigé vers la page d'accueil</p>
-            </div>
+    <div class="container">
+        <div>
             <hr>
-            <div>
-                <h2>COMMENT REJOINDRE L'ADMINISTRATION DU SITE</h2>
-            </div>
-            <div>
-                <p>Deux nouveaux liens seront disponibles dans la barre de navigation</p>
-                <div class="imgAdmin">
-                    <img src="{{ '../images/admin/admin3.PNG' }}" alt="administation" width="180px">
-                </div>
-                <p><i style="color: #6d509e" class="fa fa-cog"></i> Gestion Admin qui servira à atteindre la partie
-                    Administration du site.</p>
-                <p><i  style="color: #6d509e" class="fa fa-times-circle"></i>Pour se déconnecter.</p>
-            </div>
+            <h1 style="color:  #6d509e">DOCUMENTATION DU SITE LE MOUTON DES VILLES</h1>
             <hr>
-            <div>
-                <h2>Comment faire sa gestion du contenu</h2>
+        </div>
+        <div>
+            <h2>COMMENT S'INSCRIRE ?</h2>
+        </div>
+        <div>
+            <p id="pMenuAdmin">Dans l'URL copiez-collez le lien suivant : https://www.lemoutondesvilles.fr/creer.
+                <br>Vous renseignerez ensuite votre adresse mail et votre mot de passe.</p>
+            <div class="imgAdmin">
+                <img src="{{ '../images/admin/admin.PNG' }}" alt="inscription">
             </div>
-            <div>.
-                <p>Vous avez ici un accès à chaque contenu que vous souhaitez créer/modifier/supprimer.</p>
-                <p>Vous avez un lien qui vous permet de retourner vers le site</p>
-                <div class="imgAdmin">
-                    <img src="{{ '../images/admin/admin4.PNG' }}" alt="menu admin" width="180px">
-                </div>
-            </div>
+            <p style="color: red; font-weight: bold"><i class="fas fa-exclamation-triangle"></i> Il vous sera impossible
+                de modifer votre mot de passe
+                par la suite, pensez à le noter précieusement</p>
+        </div>
+        <div>
             <hr>
-            <div>
-                <h2>Gérer du contenu</h2>
+            <h2>COMMENT SE CONNECTER ?</h2>
+        </div>
+        <div>
+            <p>Dirigez-vous tout en bas de n'importe quelle page du site</p>
+            <div class="imgAdmin">
+                <img src="{{ '../images/admin/admin1.PNG' }}" alt="connexion">
             </div>
-            <div>.
-                <p>Losque vous selectionner le créer/modifier/supprimer.</p>
-                <p>Vous avez un lien qui vous permet de retourner vers le site</p>
+            <p>Cliquez sur l'icone à droite de "Mentions légales" en bas de page.
+                <i style="color: #6d509e" class="fa fa-user"></i></p>
+            <p>Remplissez les champs avec les informations que vous avez préalablement créées</p>
+            <div class="imgAdmin">
+                <img src="{{ '../images/admin/admin2.PNG' }}" alt="connexion">
+            </div>
+            <p>Vous serez alors redirigé vers la page d'accueil</p>
+        </div>
+        <hr>
+        <div>
+            <h2>COMMENT REJOINDRE L'ADMINISTRATION DU SITE</h2>
+        </div>
+        <div>
+            <p>Deux nouveaux liens seront disponibles dans la barre de navigation</p>
+            <div class="imgAdmin">
+                <img src="{{ '../images/admin/admin3.PNG' }}" alt="administation" width="180px">
+            </div>
+            <p><i style="color: #6d509e" class="fa fa-cog"></i> Gestion Admin qui servira à atteindre la partie
+                Administration du site.</p>
+            <p><i style="color: #6d509e" class="fa fa-times-circle"></i>Pour se déconnecter.</p>
+        </div>
+        <hr>
+        <div>
+            <h2>Comment faire sa gestion du contenu</h2>
+        </div>
+        <div>.
+            <p>Vous avez ici un accès à chaque contenu que vous souhaitez créer/modifier/supprimer.</p>
+            <p>Vous avez un lien qui vous permet de retourner vers le site</p>
+            <div class="imgAdmin">
+                <img src="{{ '../images/admin/admin4.PNG' }}" alt="menu admin" width="180px">
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2>Gérer du contenu</h2>
+        </div>
+        <div>.
+            <p>Losque vous selectionner un contenu dans le menu, vous aurez accès aux éléments que vous souhaitez
+                créer/modifier/supprimer sur la droit.</p>
+            <div class="imgAdmin">
+                <img style="width: 20%!important;" src="{{ '../images/admin/admin5.PNG' }}" alt="menu admin">
+            </div>
+            <div>
+                <p style="text-align: left">Le bouton "Éditer" sert à modifier les information du produit séléctionné.
+                    Les modifications seront
+                    automatiquement appliquées sur la page web correspondante.</p>
+                <p style="text-align: left">Le bouton "Supprimer" sert à supprimer le produit.</p>
+                <p style="text-align: left">Le bouton "Créer" sert à créer un nouveau produit. Les produits créés seront
+                    automatiquement affichés sur la page web correspondante.</p>
+                <p style="color: red; font-weight: bold"><i class="fas fa-exclamation-triangle"></i> Les champs ayant
+                    une petites étoiles à coté de leur nom sont les champs qu'il vous faudra obligatoirement remplir.
+                </p>
                 <div class="imgAdmin">
-                    <img src="{{ '../images/admin/admin5.PNG' }}" alt="menu admin" width="180px">
+                    <img src="{{ '../images/admin/admin6.PNG' }}" alt="menu admin"
+                         width="180px">
                 </div>
             </div>
         </div>
+        <hr>
+        <div>
+            <h2>Où retrouver ces informations ?</h2>
+        </div>
+        <div>
+            <hr>
+            <p><i style="color: #6d509e" class="fa fa-list"></i> Gestion objet boutique</p>
+            <p>Les objets créés sont directement envoyés dans la page https://www.Lemoutondesvilles.fr/products dans la
+                catégorie "Notre selection d'objet".</p>
+            <hr>
+            <p><i style="color: #6d509e" class="fa fa-list"></i> Gestion textile boutique</p>
+            <p>Les objets créés sont directement envoyés dans la page https://www.Lemoutondesvilles.fr/products dans la
+                catégorie "Notre selection textile".</p>
+            <hr>
+            <p><i style="color: #6d509e" class="fa fa-list"></i> Avis client</p>
+            <p>Les avis client sont envoyés dans le carousel présent a l'accueil
+                https://www.Lemoutondesvilles.fr/Acceuil dans la catégorie "Avis client".</p>
+            <div class="imgAdmin">
+                <img src="{{ '../images/admin/admin7.PNG' }}" alt="menu admin"
+                     style="width: 50%!important;">
+            </div>
+            <p style="color: red; font-weight: bold"><i class="fas fa-exclamation-triangle"></i> Les avis apparaissent
+                aléatoirement. Si l'avis créé n'apparaît pas directement après sa mise en ligne ne vous inquiètez pas.
+            </p>
+            <hr>
+            <p><i style="color: #6d509e" class="fa fa-list"></i> Coup de coeur</p>
+            <p>Les objets créés sont directement envoyés dans la page https://www.Lemoutondesvilles.fr/vitrine dans la
+                catégorie "Nos coup de coeur".</p>
+            <hr>
+            <p><i style="color: #6d509e" class="fa fa-list"></i> Promotion</p>
+            <p>Les objets créés sont directement envoyés dans la page https://www.Lemoutondesvilles.fr/vitrine dans la
+                catégorie "Nos promotions".</p>
+            <hr>
+            <p><i style="color: #6d509e" class="fa fa-list"></i> Fin de série</p>
+            <p>Les objets créés sont directement envoyés dans la page https://www.Lemoutondesvilles.fr/vitrine dans la
+                catégorie "Nos fins de série".</p>
+            <hr>
+            <p><i style="color: #6d509e" class="fa fa-list"></i> QR code</p>
+            <p>Les QR codes créés sont directement envoyés dans la page https://www.Lemoutondesvilles.fr/contact juste
+                en dessous du formulaire de contact.</p>
+            <hr>
+            <p><i style="color: #6d509e" class="fa fa-list"></i> Gallerie</p>
+            <p>Les créations ajoutées sont directement envoyés dans la page
+                https://www.Lemoutondesvilles.fr/gallery dans la catégorie que vous aurez séléctionné lors de la
+                création ou de la modification.</p>
+            <div class="imgAdmin">
+                <img src="{{ '../images/admin/admin8.PNG' }}" alt="menu admin"
+                     width="180px">
+            </div>
+            <hr>
+        </div>
+    </div>
     </body>
 {% endblock %}

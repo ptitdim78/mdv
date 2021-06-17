@@ -80,17 +80,21 @@
                         </div>
                         <div class="contact_form">
                             <div style="justify-content: center">
-                                <blockquote>Plus qu'un pas, votre avis nous remplit de joie</blockquote>
+                                <div style="display: flex; justify-content: center" class="section-title wow fadeInDown"
+                                     data-wow-duration="1s" data-wow-delay="300ms">
+                                    <h1 id="titreSection"><span>Laissez un avis</span></h1>
+                                </div>
+                                <h2>Plus qu'un pas, votre avis nous remplit de joie</h2>
                                 {% for QrCodes in QrCode %}
                                     <img src="{{ vich_uploader_asset(QrCodes, 'imageFile') }}" alt="QR code"
-                                         width="200px;" style="margin: 15px">
+                                         width="200px" height="200px" style="margin: 15px">
                                 {% endfor %}
                                 <div>
-                                    <p>En numérisant ce QR code avec votre téléphone (option photo ou caméra), vous allez
+                                    <p style="font-style: italic">En numérisant ce QR code avec votre téléphone (option photo ou caméra), vous allez
                                         être dirigé vers notre présence "Google Map" et vous pourrez nous laisser votre
                                         avis, merci pour l'intérêt que vous nous portez et au plaisir d'un prochain
                                         échange,</p>
-                                    <p>Votre dévoué, #DavidMesmacque</p>
+                                    <p style="float: right">Votre dévouée, #SylvieMdesigner</p>
                                 </div>
                             </div>
                         </div>

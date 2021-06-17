@@ -3,11 +3,13 @@
 namespace App\Entity;
 
 use App\Repository\ProductsRepository;
+use DateTime;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
+//use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
-use Vich\UploaderBundle\Form\Type\VichFileType;
+//use Vich\UploaderBundle\Form\Type\VichFileType;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
@@ -77,8 +79,8 @@ class Products
     private $composition;
 
     /**
-     * @ORM\Column(type="datetime", nullable= true)
-     * @var \DateTime
+     * @ORM\Column(type="datetime")
+     * @var DateTime
      */
     private $updateAt;
 
@@ -208,12 +210,12 @@ class Products
         return $this;
     }
 
-    public function getUpdateAt(): ?\DateTimeInterface
+    public function getUpdateAt(): ?DateTimeInterface
     {
         return $this->updateAt;
     }
 
-    public function setUpdateAt(\DateTimeInterface $updateAt): self
+    public function setUpdateAt(DateTimeInterface $updateAt): self
     {
         $this->updateAt = $updateAt;
 
@@ -230,7 +232,7 @@ class Products
         $this->imageFile = $image;
 
         if ($image) {
-            $this->updateAt = new \DateTime('now');
+            $this->updateAt = new DateTime('now');
         }
     }
 

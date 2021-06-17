@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\QrCodeRepository;
+use DateTime;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -21,7 +23,7 @@ class QrCode
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
 
@@ -32,7 +34,7 @@ class QrCode
     private $imageFile;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="datetime")
      */
     private $createdAt;
 
@@ -63,16 +65,16 @@ class QrCode
         $this->imageFile = $image;
 
         if ($image) {
-            $this->createdAt = new \DateTime('now');
+            $this->createdAt = new DateTime('now');
         }
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
+    public function getCreatedAt(): ?DateTimeInterface
     {
         return $this->createdAt;
     }
 
-    public function setCreatedAt(?\DateTimeInterface $createdAt): self
+    public function setCreatedAt(?DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
 

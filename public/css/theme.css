@@ -63,11 +63,6 @@
 	margin-top: 20px
 }
 
-
-.leMDV::first-letter{
-	color: #6d509e;
-	font-size: x-large;
-}
 .titleProduit{
 	justify-content: center;
 	display: flex;
@@ -1000,11 +995,7 @@ cite {
 }
 
 .team-member-role {
-    /*font-size: 16px;*/
-    /*margin-bottom: 16px;*/
-	/*font-weight: 700;*/
 	font-size: large;
-	text-decoration: underline;
 }
 
 .team-details p{

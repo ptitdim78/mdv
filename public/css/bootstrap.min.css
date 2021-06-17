@@ -1583,7 +1583,8 @@ pre code {
 
 @media (min-width: 768px) {
     .container {
-        width: 750px
+        width: 750px;
+        text-align: -webkit-center!important;
     }
 }
 
@@ -1593,12 +1594,13 @@ pre code {
     }
     #responsivePartenaire{
         width: 75%!important;
+        text-align: -webkit-center!important;
     }
 }
 
 @media (min-width: 1200px) {
     .container {
-        width: 1170px
+        width: 1170px;
     }
 }
 

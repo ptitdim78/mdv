@@ -243,60 +243,101 @@
     </section>
     <section class="section-wrapper" id="works">
         <div class="wrapper-block-skills">
-        <div class="container">
-                    <div class="row">
-                        <div class="element-title section-title wow fadeInDown element-title" data-wow-duration="1s"
-                             data-wow-delay="300ms">
-                            <h1 id="titreSection">Exemples de nos créations !</h1>
-                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="element-title section-title wow fadeInDown element-title" data-wow-duration="1s"
+                         data-wow-delay="300ms">
+                        <h1 id="titreSection">Exemples de nos créations !</h1>
                     </div>
                 </div>
+            </div>
             <div class="row">
-                <div class="container-fluid">
-                    <div class="wrapper-works">
-                        <div class="portfoliO">
-                            <ul id="filters" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="200ms">
-                                <li><span class="filter active titreCréa" data-filter="all">Immobilier</span>
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="skill wow fadeInRight" data-wow-duration="1s"
-                                             data-wow-delay="300ms">
-                                            <img class="nosCréa" id="realisation"
-                                                 src="{{ asset('images/immoIndex.jpg') }}" alt="Immobilier">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><span class="filter titreCréa" data-filter=".category-1">Bâche et roll-up</span>
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="skill wow fadeInRight" data-wow-duration="1s"
-                                             data-wow-delay="300ms">
-                                            <img class="nosCréa" id="realisation"
-                                                 src="{{ asset('images/bacheRuIndex.jpg') }}" alt="Bâche">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><span class="filter titreCréa" data-filter=".category-2">Marquage</span>
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="skill wow fadeInRight" data-wow-duration="1s"
-                                             data-wow-delay="300ms">
-                                            <img class="nosCréa" id="realisation"
-                                                 src="{{ asset('images/marquageIndex.jpg') }}" alt="Marquage">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><span class="filter titreCréa" data-filter=".category-3">Logo</span>
-                                    <div class="col-lg-3 col-md-3">
-                                        <div class="skill wow fadeInRight" data-wow-duration="1s"
-                                             data-wow-delay="500ms">
-                                            <img class="nosCréa" id="realisation"
-                                                 src="{{ asset('images/logoIndex.jpg') }}" alt="Logo">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                <div id="responsivePartenaire"  class="container">
+                    <div class="wrapper-count">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3">
+                                <h2 class="filter active titreCréa" id="titreSection">Immobilier</h2>
+                                <div id="partenaires" class="skill wow fadeInRight" data-wow-duration="1s"
+                                     data-wow-delay="300ms">
+                                    <a href="https://acd-inc.fr" target="_blank"><img class="photoPartenaires" id="realisation"
+                                                                                      src="{{ asset('images/immoIndex.jpg') }}" alt="immobilier"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <h2 class="filter active titreCréa" id="titreSection">Immobilier</h2>
+                                <div id="partenaires" class="skill wow fadeInRight" data-wow-duration="1s"
+                                     data-wow-delay="300ms">
+                                    <a href="https://acd-inc.fr/langues" target="_blank"><img class="photoPartenaires" id="realisation"
+                                                                                              src="{{ asset('images/bacheRuIndex.jpg') }}" alt="bache"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <h2 class="filter active titreCréa" id="titreSection">Immobilier</h2>
+                                <div id="partenaires" class="skill wow fadeInRight" data-wow-duration="1s"
+                                     data-wow-delay="300ms">
+                                    <a href="https://www.qigong.spirit.fr/" target="_blank"><img class="photoPartenaires" id="realisation"
+                                                                                                 src="{{ asset('images/marquageIndex.jpg') }}" alt="Marquage"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <h2 class="filter active titreCréa" id="titreSection">Immobilier</h2>
+                                <div id="partenaires" class="skill wow fadeInRight" data-wow-duration="1s"
+                                     data-wow-delay="500ms">
+                                    <a href="https://www.dmsc-int.com/" target="_blank"><img class="photoPartenaires" id="realisation"
+                                                                                             src="{{ asset('images/logoIndex.jpg') }}" alt="Logo"></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+{#            <div class="row">#}
+{#                <div class="container-fluid">#}
+{#                    <div class="wrapper-works">#}
+{#                        <div class="portfoliO">#}
+{#                            <ul id="filters" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="200ms">#}
+{#                                <li><span class="filter active titreCréa" data-filter="all">Immobilier</span>#}
+{#                                    <div class="col-lg-3 col-md-3">#}
+{#                                        <div class="skill wow fadeInRight" data-wow-duration="1s"#}
+{#                                             data-wow-delay="300ms">#}
+{#                                            <h1 class="filter active titreCréa">Immobilier</h1>#}
+{#                                            <img class="nosCréa" id="realisation"#}
+{#                                                 src="{{ asset('images/immoIndex.jpg') }}" alt="Immobilier">#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                                <li><span class="filter titreCréa" data-filter=".category-1">Bâche et roll-up</span>#}
+{#                                    <div class="col-lg-3 col-md-3">#}
+{#                                        <div class="skill wow fadeInRight" data-wow-duration="1s"#}
+{#                                             data-wow-delay="300ms">#}
+{#                                            <img class="nosCréa" id="realisation"#}
+{#                                                 src="{{ asset('images/bacheRuIndex.jpg') }}" alt="Bâche">#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                                <li><span class="filter titreCréa" data-filter=".category-2">Marquage</span>#}
+{#                                    <div class="col-lg-3 col-md-3">#}
+{#                                        <div class="skill wow fadeInRight" data-wow-duration="1s"#}
+{#                                             data-wow-delay="300ms">#}
+{#                                            <img class="nosCréa" id="realisation"#}
+{#                                                 src="{{ asset('images/marquageIndex.jpg') }}" alt="Marquage">#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                                <li><span class="filter titreCréa" data-filter=".category-3">Logo</span>#}
+{#                                    <div class="col-lg-3 col-md-3">#}
+{#                                        <div class="skill wow fadeInRight" data-wow-duration="1s"#}
+{#                                             data-wow-delay="500ms">#}
+{#                                            <img class="nosCréa" id="realisation"#}
+{#                                                 src="{{ asset('images/logoIndex.jpg') }}" alt="Logo">#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
         </div>
         <div class="partners parallax">
             <div class="overlay">

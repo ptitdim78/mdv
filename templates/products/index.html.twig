@@ -23,7 +23,7 @@
                                         <div style="height: 300px" id="imageProduit">
                                             {% if produit.image !=null %}
                                                 <a href="{{produit.lien }}" target="_blank"><img style="height: 100%; width: 100%" src="{{ vich_uploader_asset(produit, 'imageFile') }}"
-                                                                                 alt="image produit objet">
+                                                                                                 alt="image produit objet">
                                                 </a>
                                             {% else %}
                                                 <img style="height: 100%; width: 100%" src="{{ asset('images/affiche.png') }}"

@@ -1,4 +1,12 @@
-
+.form-error-icon{
+	background-color: red!important;
+}
+.form-error-message{
+	color: red!important;
+}
+.form-error-message::after{
+	content: " Le mot de passe doit contenir une majuscule, un caractère spécial et un chiffre ";
+}
 .tailleThumbnail {
 	min-height: 96% !important;
 }

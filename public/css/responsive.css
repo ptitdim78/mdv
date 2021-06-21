@@ -4,15 +4,14 @@
 	/*		background-color: yellow ;*/
 	/*	}*/
 	/*}*/
-
+	@media (min-width: 3000px) and (max-width: 8000px){
+		#navigation{
+			display: flex;
+			justify-content: center;
+			background-color: rgba(109,80,158,0.2777485994397759);
+		}
+	}
 	@media (min-width: 1367px) and (max-width: 3000px) {
-		.descriptifProduct{
-
-		}
-		.mesCards{
-
-		}
-
 		#navigation{
 			display: flex;
 			justify-content: center;
@@ -32,22 +31,11 @@
 		}
 		  
 	}
-	@media (min-width: 1024px) and (max-width: 1366px) {
-		.leMDV{
-
-		}
-		.mesCards{
-
-		}
-
-		.descriptifProduct{
-
-		}
-		.infosSupp{
-
-		}
+	@media (min-width: 1025px) and (max-width: 1367px) {
 		#navigation {
+			display: flex;
 			justify-content: center;
+			background-color: rgba(109,80,158,0.2777485994397759);
 		}
 	}
 	/* Portrait tablet to landscape and desktop */
@@ -84,7 +72,7 @@
 		}
 		.photoPartenaires{
 			display: flex;
-			width: 60%;
+			/*width: 60%;*/
 			height: 110px;
 			justify-content: center;
 		}
@@ -250,7 +238,7 @@
 		.photoPartenaires{
 			margin-top: 10px;
 			display: flex;
-			width: 57%;
+			/*width: 57%;*/
 			justify-content: center;
 		}
 
@@ -325,6 +313,7 @@
 		}
 		.scroll-up{
 			display: none!important;
+			opacity: 0!important;
 		}
 		#resizeFooter{
 			font-size: 10px;

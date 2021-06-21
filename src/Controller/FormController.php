@@ -44,7 +44,7 @@ class FormController extends AbstractController
             $mailer->send($email);
 
 
-            $this->addFlash('success', 'Test réussi');
+            $this->addFlash('success', 'Email envoyé');
             return $this->redirectToRoute('contact');
         }
         return $this->render('form/contact.html.twig', [

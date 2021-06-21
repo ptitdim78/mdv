@@ -8,11 +8,17 @@
             </div>
         </div>
         <div class="row">
-            <h3 class="element-title">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium consequuntur cumque debitis
-                dignissimos ex expedita facilis id illo illum iusto, molestias nostrum possimus rem repudiandae ut
-                voluptate. Consectetur, qui.
+            <h3 style="text-align: justify">
+                Vers 1454, l'allemand Johannes Gutenberg inventa les caractères mobiles, aujourd’hui, nous vous
+                proposons des actions de communication et surtout d’impression vers les différents types de supports
+                soumis en permanence à notre veille technologique :
             </h3>
+            <hr>
+            <ul style="text-align: justify; font-size: 20px;">
+                <li style="color: black!important;" class="listCrea"> - La croissance, les évolutions techniques et réglementaires...</li>
+                <li style="color: black!important;" class="listCrea"> - Vos attentes : types de besoins, budget, fréquence de renouvellement...</li>
+                <li style="color: black!important;" class="listCrea"> - Nos actions pour vous servir que nous vous invitons à découvrir sur notre site et nos pages sur les réseaux sociaux…</li>
+            </ul>
         </div>
         <div class="row">
             <div class="element-title">
@@ -60,8 +66,8 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="thumbnail tailleThumbnail">
                             {% if creation.image !=null %}
-                            <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                 alt="gallerie bâche">
+                                <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
+                                     alt="gallerie bâche">
                             {% else %}
                                 <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
                                      alt="gallerie bâche">

@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Se connecter{% endblock %}
 
 {% block body %}
     <div class="contact_form">
         <form method="post" id="contact-form">
             {% if error %}
-                <div class="alert alert-danger">{{ 'Votre mail n\'a pas été reconnu' }}</div>
+                <div class="alert alert-danger">{{ 'Votre email ou votre mot de passe n\'est pas valide' }}</div>
             {% endif %}
             <div class="row" style="display: flex; justify-content: center; padding-bottom: 25px">
                 <h1 id="titreSection" style=" width: 35%">Connexion</h1>

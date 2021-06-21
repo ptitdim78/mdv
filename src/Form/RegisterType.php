@@ -30,19 +30,21 @@ class RegisterType extends AbstractType
                 'constraints'=>[
                     new Regex('/^(?=.{2,}$)(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/'),
                 ],
-                'invalid_message'=>'Le mot de passe et confirmation doivent être identiques',
+                'invalid_message'=>'Les mots de passe ne sont pas identiques.',
                 'type'=> PasswordType::class,
                 'required'=>true,
                 'first_options'=>[
+                    'error_bubbling' => true,
                     'label'=>'Mot de passe',
                     'attr'=>[
-                        'placeholder'=>'Saisir votre mot de passe'
-                    ]
+                        'placeholder'=>'Saisir votre mot de passe',
+                    ],
+
                 ],
                 'second_options'=>[
                     'label'=>'Confirmez votre mot de passe',
                     'attr'=>[
-                        'placeholder'=>'Merci de confirmer votre mot de passe'
+                        'placeholder'=>'Merci de confirmer votre mot de passe',
                     ]
                 ]
             ]);

@@ -767,8 +767,7 @@ cite {
 	padding-top: 60px;
 	display: flex;
 	flex-flow: wrap;
-	/*passage a la ligne*/
-	justify-content: space-around;
+	justify-content: center;
 }
 
 

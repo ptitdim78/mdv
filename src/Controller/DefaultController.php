@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Gallery;
 use App\Entity\Reviews;
+use App\Entity\Videos;
 use App\Repository\ReviewsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use http\Env\Request;
@@ -26,7 +27,6 @@ class DefaultController extends AbstractController
     {
         $this->em = $em;
     }
-
     /**
      * @Route("/", name="default")
      * @return Response
@@ -36,9 +36,10 @@ class DefaultController extends AbstractController
     {
 
         $listReviews = $this->getDoctrine()->getRepository(Reviews::class)->findAll();
+        $listVideos =  $this->getDoctrine()->getRepository(Videos::class)->findby(['online' => true], ['id'=>'DESC']);
 
         return $this->render('default/index.html.twig', [
-            'controller_name' => 'DefaultController', 'toutesLesReviews' => $listReviews,
+            'controller_name' => 'DefaultController', 'toutesLesReviews' => $listReviews, 'toutesLesVideos' => $listVideos,
         ]);
     }
 

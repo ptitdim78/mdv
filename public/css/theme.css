@@ -1,3 +1,7 @@
+.container-videos{
+	display: flex;
+	width: 100%
+}
 .form-error-icon{
 	background-color: red!important;
 }
@@ -1164,6 +1168,10 @@ li:last-child {
 
 .partners{
 	background-image: url("../images/clothes.jpg");
+}
+
+.videos{
+	background-image: url("../images/camera.jpg");
 }
 
 .wrapper-partners{

@@ -10,6 +10,7 @@ use App\Entity\ProductsClothes;
 use App\Entity\Promo;
 use App\Entity\QrCode;
 use App\Entity\Reviews;
+use App\Entity\Videos;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -35,7 +36,7 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToRoute('Vers le site', 'fa fa-home', 'default');
-        yield MenuItem::linkToDashboard('Documentation', 'fas fa-home');
+        yield MenuItem::linkToDashboard('Documentation', 'fa fa-chalkboard-teacher');
         yield MenuItem::linkToCrud('Gestion objet boutique', 'fas fa-list', Products::class);
         yield MenuItem::linkToCrud('Gestion textile boutique', 'fas fa-list', ProductsClothes::class);
         yield MenuItem::linkToCrud('Avis client', 'fas fa-list', Reviews::class);
@@ -43,6 +44,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Promotion', 'fas fa-list', Promo::class);
         yield MenuItem::linkToCrud('Fin de série', 'fas fa-list', FinDeSerie::class);
         yield MenuItem::linkToCrud('QR code', 'fas fa-list', QrCode::class);
-        yield MenuItem::linkToCrud('Gallerie', 'fas fa-list', Gallery::class);
+        yield MenuItem::linkToCrud('Galerie', 'fas fa-list', Gallery::class);
+        yield MenuItem::linkToCrud('Video', 'fas fa-list', Videos::class);
     }
 }

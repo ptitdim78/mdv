@@ -1,33 +1,38 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <script src="{{ 'js/selector.js' }}"></script>
     <div class="container">
         <div class="row wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
             <div class="wrapper-why-us">
                 <div class="col-lg-3 col-sm-3 wow fadeInDown" data-wow-duration="1s"
                      data-wow-delay="300ms">
-                    <a href="#" onclick="tous()" style="margin: 0"><i class="hovicon effect-1 sub-a"
-                                                                      style="margin: 0"><b class="fa fa-list"
-                                                                                           style="color: #6d509e; position: relative;bottom: 13%"></b></i></a>
+                    <a aria-label="tous" href="#" onclick="tous()" style="margin: 0"><i class="hovicon effect-1 sub-a"
+                                                                                        style="margin: 0"><b
+                                    class="fa fa-list"
+                                    style="color: #6d509e; position: relative;bottom: 13%"></b></i></a>
                     <h2 style="margin: 0"><strong style="color : #FF249F">TOUS</strong></h2>
                 </div>
                 <div class="col-lg-3 col-sm-3 wow fadeInDown" data-wow-duration="1s"
                      data-wow-delay="300ms">
-                    <a href="#n1" onclick="coeur()" style="margin: 0"><i class="hovicon effect-1 sub-a"
-                                                                         style="margin: 0"><b class="fa fa-heart"
-                                                                                              style="color: #6d509e; position: relative;bottom: 13%"></b></i></a>
+                    <a aria-label="coeur" href="#n1" onclick="coeur()" style="margin: 0"><i
+                                class="hovicon effect-1 sub-a"
+                                style="margin: 0"><b class="fa fa-heart"
+                                                     style="color: #6d509e; position: relative;bottom: 13%"></b></i></a>
                     <h2 style="margin: 0"><strong style="color : #FF249F">COUP DE COEUR</strong></h2>
                 </div>
                 <div class="col-lg-3 col-sm-3 wow fadeInDown" data-wow-duration="1s"
                      data-wow-delay="450ms">
-                    <a href="#n2" onclick="promo()" style="margin: 0"><i class="hovicon effect-1 sub-a"
-                                                                         style="margin: 0"><b class="fa fa-percent"
-                                                                                              style="color: #6d509e; position: relative;bottom: 13%"></b></i></a>
+                    <a aria-label="promo" href="#n2" onclick="promo()" style="margin: 0"><i
+                                class="hovicon effect-1 sub-a"
+                                style="margin: 0"><b class="fa fa-percent"
+                                                     style="color: #6d509e; position: relative;bottom: 13%"></b></i></a>
                     <h2 style=" color: #FF249F; margin: 0"><strong>PROMOTION</strong></h2>
                 </div>
                 <div class="col-lg-3 col-sm-3 wow fadeInDown" data-wow-duration="1s"
                      data-wow-delay="600ms">
-                    <a href="#n3" onclick="fds()" style="margin: 0"><i class="hovicon effect-1 sub-a" style="margin: 0"><b
+                    <a aria-label="fds" href="#n3" onclick="fds()" style="margin: 0"><i class="hovicon effect-1 sub-a"
+                                                                                        style="margin: 0"><b
                                     class="fa fa-box-open"
                                     style="color: #6d509e; position: relative;bottom: 13%"></b></i></a>
                     <h2 style="color : #FF249F; margin: 0"><strong>FIN DE SÉRIE</strong></h2>
@@ -166,8 +171,8 @@
                              data-wow-delay="300ms">
                             <h1 id="titreSection">Nos fins de série</h1>
                         </div>
-                        <h3>Derniers produits disponibles à la vente, avec ou sans marquage. Nous consulter pour les
-                            quantités encore en stock et connaître les modalités de ventes.</h3>
+                        <h2>Derniers produits disponibles à la vente, avec ou sans marquage. Nous consulter pour les
+                            quantités encore en stock et connaître les modalités de ventes.</h2>
                     </div>
                 </div>
                 <div class="row wow fadeInRight" data-wow-duration="1s" data-wow-delay="800ms">

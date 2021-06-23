@@ -5,10 +5,12 @@ easy_admin:
       list:
         fields:
           - { property: 'image', type: 'image', base_path: '%app.path.product_images%'}
+          - { property: 'video', type: 'video', base_path: '%app.path.product_videos%'}
       # ...
       show:
         fields:
           - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+          - { property: 'video', type: 'video', base_path: '%app.path.product_videos%'}
       # ...
       form:
         fields:

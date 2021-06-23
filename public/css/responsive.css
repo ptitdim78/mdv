@@ -1,10 +1,7 @@
-	/* Small desktop */
-	/*@media (prefers-color-scheme: dark) {*/
-	/*	body{*/
-	/*		background-color: yellow ;*/
-	/*	}*/
-	/*}*/
 	@media (min-width: 3000px) and (max-width: 8000px){
+		.boutonLog{
+			margin-bottom: 425px!important;
+		}
 		#navigation{
 			display: flex;
 			justify-content: center;
@@ -12,6 +9,9 @@
 		}
 	}
 	@media (min-width: 1367px) and (max-width: 3000px) {
+		.boutonLog{
+			margin-bottom: 425px!important;
+		}
 		#navigation{
 			display: flex;
 			justify-content: center;
@@ -31,15 +31,32 @@
 		}
 		  
 	}
-	@media (min-width: 1025px) and (max-width: 1367px) {
+	@media (min-width: 1920px) {
+		.titleLog{
+			width: 45%!important;
+		}
+	}
+	@media (min-width: 1024px) and (max-width: 1367px) {
+		.boutonLog{
+			margin-bottom: 650px!important;
+		}
 		#navigation {
 			display: flex;
 			justify-content: center;
 			background-color: rgba(109,80,158,0.2777485994397759);
 		}
+		#imageProduit{
+			height: 330px!important;
+		}
 	}
 	/* Portrait tablet to landscape and desktop */
-	@media (min-width: 768px) and (max-width: 1024px) {
+	@media (min-width: 768px) and (max-width: 1023px) {
+		.container-videos{
+			width: 102% !important;
+		}
+		.boutonLog{
+			margin-bottom: 350px!important;
+		}
 		#touteDescriptionClothes{
 			height: 340px!important;
 		}
@@ -50,7 +67,7 @@
 			min-height: 300px!important;
 		}
 		#imageProduit{
-			height: 230px!important;
+			height: 270px!important;
 		}
 		#descriptionProduits{
 			display: none;
@@ -200,6 +217,12 @@
 	
 	/* Landscape phone to portrait tablet */
 	@media (max-width: 767px) {
+		.container-videos{
+			width: 107% !important;
+		}
+		.titleLog{
+			width: 45%!important;
+		}
 		#pMenuAdmin{
 			font-size: 15px;
 		}
@@ -302,6 +325,18 @@
 
 	/* Landscape phones and down */
 	@media (max-width: 480px) {
+		.sous-titre{
+			font-size: 20px!important;
+		}
+		.container-videos{
+			width: 110%!important;
+		}
+		.boutonLog{
+			margin-bottom: 200px!important;
+		}
+		.titleLog{
+			width: 65%!important;
+		}
 		#pMenuAdmin{
 			font-size: 13px;
 		}

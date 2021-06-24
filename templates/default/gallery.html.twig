@@ -2,9 +2,11 @@
 
 {% block body %}
     <div class="container">
-        <div class="row">
-            <div class="element-title">
-                <h1 id="titreSection">Nos créations</h1>
+        <div class="container">
+            <div class="row">
+                <div class="element-title">
+                    <h1 id="titreSection">Nos créations</h1>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -22,180 +24,184 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="element-title">
-                <h1 id="titreSection">Signalétique</h1>
+        <div class="container">
+            <div class="row">
+                <div class="element-title">
+                    <h1 id="titreSection">Signalétique</h1>
+                </div>
             </div>
         </div>
-        <div class="row productContainer">
-            {% for creation in gallery %}
-                {% if creation.domaine == 'Signaletique' %}
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="thumbnail tailleThumbnail">
-                            {% if creation.image !=null %}
-                                <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                     alt="gallerie signalétique">
-                            {% else %}
-                                <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
-                                     alt="gallerie signalétique">
-                            {% endif %}
-                            <div class="caption captionGallery" style="padding: 0!important;">
-                                <h3 class="titleGallery">{{ creation.title }}</h3>
+        <div class="container">
+            <div class="row productContainer">
+                {% for creation in gallery %}
+                    {% if creation.domaine == 'Signaletique' %}
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="thumbnail tailleThumbnail">
+                                {% if creation.image !=null %}
+                                    <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
+                                         alt="gallerie signalétique">
+                                {% else %}
+                                    <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
+                                         alt="gallerie signalétique">
+                                {% endif %}
+                                <div class="caption captionGallery" style="padding: 0!important;">
+                                    <h3 class="titleGallery">{{ creation.title }}</h3>
+                                </div>
+                                {% if creation.description != null %}
+                                    <div class="descriptionGallery">
+                                        <h5 style="font-size: large">{{ creation.description }}</h5>
+                                    </div>
+                                {% else %}
+                                    <div class="descriptionGallery">
+                                        <h5 style="font-size: large">Création réalisée par Lemoutondesvilles.
+                                            "Vous aider à créer une image qui vous ressemble.." #SylvieMdesigner</h5>
+                                    </div>
+                                {% endif %}
                             </div>
-                            {% if creation.description != null %}
-                                <div class="descriptionGallery">
-                                    <h5 style="font-size: large">{{ creation.description }}</h5>
-                                </div>
-                            {% else %}
-                                <div class="descriptionGallery">
-                                    <h5 style="font-size: large">Création réalisée par Lemoutondesvilles.
-                                        "Vous aider à créer une image qui vous ressemble.." #SylvieMdesigner</h5>
-                                </div>
-                            {% endif %}
                         </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="row">
-            <div class="element-title">
-                <h1 id="titreSection">Bâche</h1>
+                    {% endif %}
+                {% endfor %}
             </div>
-        </div>
-        <div class="row productContainer">
-            {% for creation in gallery %}
-                {% if creation.domaine == 'Bache' %}
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="thumbnail tailleThumbnail">
-                            {% if creation.image !=null %}
-                                <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                     alt="gallerie bâche">
-                            {% else %}
-                                <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
-                                     alt="gallerie bâche">
-                            {% endif %}
-                            <div class="caption captionGallery" style="padding: 0!important;">
-                                <h3 class="titleGallery">{{ creation.title }}</h3>
-                            </div>
-                            {% if creation.description != null %}
-                                <div class="descriptionGallery">
-                                    <h5 style="font-size: large">{{ creation.description }}</h5>
-                                </div>
-                            {% else %}
-                                <div class="descriptionGallery">
-                                    <h5 style="font-size: large">Création réalisée par Lemoutondesvilles.
-                                        "Vous aider à créer une image qui vous ressemble.." #SylvieMdesigner</h5>
-                                </div>
-                            {% endif %}
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="row">
-            <div class="element-title">
-                <h1 id="titreSection">Marquage</h1>
+            <div class="row">
+                <div class="element-title">
+                    <h1 id="titreSection">Bâche</h1>
+                </div>
             </div>
-        </div>
-        <div class="row productContainer">
-            {% for creation in gallery %}
-                {% if creation.domaine == 'Marquage' %}
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="thumbnail tailleThumbnail">
-                            {% if creation.image !=null %}
-                                <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                     alt="gallerie marquage">
-                            {% else %}
-                                <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
-                                     alt="gallerie marquage">
-                            {% endif %}
-                            <div class="caption captionGallery" style="padding: 0!important;">
-                                <h3 class="titleGallery">{{ creation.title }}</h3>
+            <div class="row productContainer">
+                {% for creation in gallery %}
+                    {% if creation.domaine == 'Bache' %}
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="thumbnail tailleThumbnail">
+                                {% if creation.image !=null %}
+                                    <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
+                                         alt="gallerie bâche">
+                                {% else %}
+                                    <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
+                                         alt="gallerie bâche">
+                                {% endif %}
+                                <div class="caption captionGallery" style="padding: 0!important;">
+                                    <h3 class="titleGallery">{{ creation.title }}</h3>
+                                </div>
+                                {% if creation.description != null %}
+                                    <div class="descriptionGallery">
+                                        <h5 style="font-size: large">{{ creation.description }}</h5>
+                                    </div>
+                                {% else %}
+                                    <div class="descriptionGallery">
+                                        <h5 style="font-size: large">Création réalisée par Lemoutondesvilles.
+                                            "Vous aider à créer une image qui vous ressemble.." #SylvieMdesigner</h5>
+                                    </div>
+                                {% endif %}
                             </div>
-                            {% if creation.description != null %}
-                                <div class="descriptionGallery">
-                                    <h5 style="font-size: large">{{ creation.description }}</h5>
-                                </div>
-                            {% else %}
-                                <div class="descriptionGallery">
-                                    <h5 style="font-size: large">Création réalisée par Lemoutondesvilles.
-                                        "Vous aider à créer une image qui vous ressemble.." #SylvieMdesigner</h5>
-                                </div>
-                            {% endif %}
                         </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="row">
-            <div class="element-title">
-                <h1 id="titreSection">Logo</h1>
+                    {% endif %}
+                {% endfor %}
             </div>
-        </div>
-        <div class="row productContainer">
-            {% for creation in gallery %}
-                {% if creation.domaine == 'Logo' %}
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="thumbnail tailleThumbnail">
-                            {% if creation.image !=null %}
-                                <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                     alt="gallerie logo">
-                            {% else %}
-                                <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
-                                     alt="gallerie logo">
-                            {% endif %}
-                            <div class="caption captionGallery" style="padding: 0!important;">
-                                <h3 class="titleGallery">{{ creation.title }}</h3>
-                            </div>
-                            {% if creation.description != null %}
-                                <div class="descriptionGallery">
-                                    <h5 style="font-size: large">{{ creation.description }}</h5>
-                                </div>
-                            {% else %}
-                                <div class="descriptionGallery">
-                                    <h5 style="font-size: large">Création réalisée par Lemoutondesvilles.
-                                        "Vous aider à créer une image qui vous ressemble.." #SylvieMdesigner</h5>
-                                </div>
-                            {% endif %}
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="row">
-            <div class="element-title">
-                <h1 id="titreSection">Immobilier</h1>
+            <div class="row">
+                <div class="element-title">
+                    <h1 id="titreSection">Marquage</h1>
+                </div>
             </div>
-        </div>
-        <div class="row productContainer">
-            {% for creation in gallery %}
-                {% if creation.domaine == 'Immobilier' %}
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="thumbnail tailleThumbnail">
-                            {% if creation.image !=null %}
-                                <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
-                                     alt="gallerie immobilier">
-                            {% else %}
-                                <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
-                                     alt="gallerie immobilier">
-                            {% endif %}
-                            <div class="caption captionGallery" style="padding: 0!important;">
-                                <h3 class="titleGallery">{{ creation.title }}</h3>
+            <div class="row productContainer">
+                {% for creation in gallery %}
+                    {% if creation.domaine == 'Marquage' %}
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="thumbnail tailleThumbnail">
+                                {% if creation.image !=null %}
+                                    <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
+                                         alt="gallerie marquage">
+                                {% else %}
+                                    <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
+                                         alt="gallerie marquage">
+                                {% endif %}
+                                <div class="caption captionGallery" style="padding: 0!important;">
+                                    <h3 class="titleGallery">{{ creation.title }}</h3>
+                                </div>
+                                {% if creation.description != null %}
+                                    <div class="descriptionGallery">
+                                        <h5 style="font-size: large">{{ creation.description }}</h5>
+                                    </div>
+                                {% else %}
+                                    <div class="descriptionGallery">
+                                        <h5 style="font-size: large">Création réalisée par Lemoutondesvilles.
+                                            "Vous aider à créer une image qui vous ressemble.." #SylvieMdesigner</h5>
+                                    </div>
+                                {% endif %}
                             </div>
-                            {% if creation.description != null %}
-                                <div class="descriptionGallery">
-                                    <h5 style="font-size: large">{{ creation.description }}</h5>
-                                </div>
-                            {% else %}
-                                <div class="descriptionGallery">
-                                    <h5 style="font-size: large">Création réalisée par Lemoutondesvilles.
-                                        "Vous aider à créer une image qui vous ressemble.." #SylvieMdesigner</h5>
-                                </div>
-                            {% endif %}
                         </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="element-title">
+                    <h1 id="titreSection">Logo</h1>
+                </div>
+            </div>
+            <div class="row productContainer">
+                {% for creation in gallery %}
+                    {% if creation.domaine == 'Logo' %}
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="thumbnail tailleThumbnail">
+                                {% if creation.image !=null %}
+                                    <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
+                                         alt="gallerie logo">
+                                {% else %}
+                                    <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
+                                         alt="gallerie logo">
+                                {% endif %}
+                                <div class="caption captionGallery" style="padding: 0!important;">
+                                    <h3 class="titleGallery">{{ creation.title }}</h3>
+                                </div>
+                                {% if creation.description != null %}
+                                    <div class="descriptionGallery">
+                                        <h5 style="font-size: large">{{ creation.description }}</h5>
+                                    </div>
+                                {% else %}
+                                    <div class="descriptionGallery">
+                                        <h5 style="font-size: large">Création réalisée par Lemoutondesvilles.
+                                            "Vous aider à créer une image qui vous ressemble.." #SylvieMdesigner</h5>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="element-title">
+                    <h1 id="titreSection">Immobilier</h1>
+                </div>
+            </div>
+            <div class="row productContainer">
+                {% for creation in gallery %}
+                    {% if creation.domaine == 'Immobilier' %}
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="thumbnail tailleThumbnail">
+                                {% if creation.image !=null %}
+                                    <img class="imgThumbnailGallery" src="{{ vich_uploader_asset(creation, 'imageFile') }}"
+                                         alt="gallerie immobilier">
+                                {% else %}
+                                    <img class="imgThumbnailGallery" src="{{ asset('images/affiche.png') }}"
+                                         alt="gallerie immobilier">
+                                {% endif %}
+                                <div class="caption captionGallery" style="padding: 0!important;">
+                                    <h3 class="titleGallery">{{ creation.title }}</h3>
+                                </div>
+                                {% if creation.description != null %}
+                                    <div class="descriptionGallery">
+                                        <h5 style="font-size: large">{{ creation.description }}</h5>
+                                    </div>
+                                {% else %}
+                                    <div class="descriptionGallery">
+                                        <h5 style="font-size: large">Création réalisée par Lemoutondesvilles.
+                                            "Vous aider à créer une image qui vous ressemble.." #SylvieMdesigner</h5>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 

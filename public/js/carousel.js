@@ -12,11 +12,11 @@ window.onload= function carousel() {
     let avisNumber2 = Math.floor(Math.random() * messages.length);
     let avisNumber3 = Math.floor(Math.random() * messages.length);
 
-    do{
+    do {
         avisNumber1 = Math.floor(Math.random() * messages.length);
         avisNumber2 = Math.floor(Math.random() * messages.length);
         avisNumber3 = Math.floor(Math.random() * messages.length);
-    }while(avisNumber1 === avisNumber2 | avisNumber1 === avisNumber3 || avisNumber2 === avisNumber3)
+    } while (avisNumber1 === avisNumber2 | avisNumber1 === avisNumber3 || avisNumber2 === avisNumber3)
 
 
     let p = document.createElement('p');
@@ -51,7 +51,7 @@ window.onload= function carousel() {
 
     h51.className = "name";
     p.innerHTML = newAvis;
-    if (newLastName == null){
+    if (newLastName == null) {
         newLastName = ''
     }
     h51.innerHTML = newFirstName + ' ' + newLastName;
@@ -60,7 +60,7 @@ window.onload= function carousel() {
 
     h52.className = "name";
     p2.innerHTML = newAvis2;
-    if (newLastName2 == null){
+    if (newLastName2 == null) {
         newLastName2 = ''
     }
     h52.innerHTML = newFirstName2 + ' ' + newLastName2
@@ -69,12 +69,11 @@ window.onload= function carousel() {
 
     h53.className = "name";
     p3.innerHTML = newAvis3;
-    if (newLastName3 == null){
+    if (newLastName3 == null) {
         newLastName3 = ''
     }
     h53.innerHTML = newFirstName3 + ' ' + newLastName3
     document.getElementById("pAvis3").appendChild(p3);
     document.getElementById('name3').appendChild(h53);
+
 }
-
-

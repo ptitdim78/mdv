@@ -24,8 +24,8 @@
 		.myport .portfolio-3-col
 		{
 			width: 25%;
-		}	
-		
+		}
+
 		.img-holder:hover .overlay-content{
 			top: 20%;
 		}
@@ -51,6 +51,9 @@
 	}
 	/* Portrait tablet to landscape and desktop */
 	@media (min-width: 768px) and (max-width: 1023px) {
+		.container{
+			padding-right: 6%;
+		}
 		.container-videos{
 			width: 102% !important;
 		}

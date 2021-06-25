@@ -135,8 +135,7 @@
                                          data-wow-duration="1s"
                                          data-wow-delay="800ms">
                                         <div class="team-member-image">
-                                            <img src="{{ '../images/DimitriB.jfif' }}" alt="Dimitri Bourlier"/>
-                                            <!-- Change Image -->
+                                            <img src="{{ '../images/DimitriB.jfif' }}" style="border-radius: 100%; padding: 5%" alt="Dimitri Bourlier"/>
                                             <div class="team-overlay">
                                                 <div class="img-overlay"></div>
                                             </div>
@@ -164,7 +163,7 @@
                                     <div class="team-member-holder wow flipInY" data-wow-duration="1s"
                                          data-wow-delay="1100ms">
                                         <div class="team-member-image">
-                                            <img src="{{ '../images/sylvieM.png' }}" alt="Sylvie Mesmacque"/>
+                                            <img src="{{ '../images/sylvieM.png' }}" style="border-radius: 100%; padding: 5%" alt="Sylvie Mesmacque"/>
                                             <!-- Change Image -->
                                             <div class="team-overlay">
                                                 <div class="img-overlay"></div>
@@ -427,26 +426,24 @@
                                 data-wow-delay="300ms">TITRE</h1>
                         </div>
                     </div>
-
-                        <div class="container">
-                            <div class="wrapper-partners">
-                                <div class="col-lg-6 col-md-6 partners-img wow fadeInRight container-videos" data-wow-duration="1s" data-wow-delay="300ms">
-                                    <div style="width: 100%" class="row productContainer">
-                                    {% for videos in toutesLesVideos | slice(0, 3)%}
-                                        {% if videos.online == true %}
-                                                <div style="margin-bottom: 2%" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                    <video style="border: solid 1px white; width: 100%" controls controlsList="nofullscreen nodownload noremoteplayback">
-                                                         <source src="{{ vich_uploader_asset(videos, 'videoFile') }}" type="video/mp4">
-                                                    </video>
-                                                    <h1 style="color: white; border-block: solid 1px white; text-align: center">{{ videos.title }}</h1>
-                                                </div>
-                                        {% endif %}
-                                    {% endfor %}
-                                    </div>
+                    <div class="container">
+                        <div class="wrapper-partners">
+                            <div class="col-lg-6 col-md-6 partners-img wow fadeInRight container-videos" data-wow-duration="1s" data-wow-delay="300ms">
+                                <div style="width: 100%" class="row productContainer">
+                                {% for videos in toutesLesVideos | slice(0, 3)%}
+                                    {% if videos.online == true %}
+                                            <div style="margin-bottom: 2%" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                <video style="border: solid 1px white; width: 100%" controls controlsList="nofullscreen nodownload noremoteplayback">
+                                                     <source src="{{ vich_uploader_asset(videos, 'videoFile') }}" type="video/mp4">
+                                                </video>
+                                                <h1 style="color: white; border-block: solid 1px white; text-align: center">{{ videos.title }}</h1>
+                                            </div>
+                                    {% endif %}
+                                {% endfor %}
                                 </div>
                             </div>
                         </div>
-
+                    </div>
                 </div>
             </div>
         </div>

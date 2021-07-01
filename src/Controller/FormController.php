@@ -30,7 +30,7 @@ class FormController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
             $email = (new TemplatedEmail())
                 ->from($contact->getMail())
-                ->to('cabcee739b-cb55d7@inbox.mailtrap.io')
+                ->to('contact@lemoutondesvilles.fr')
                 ->subject('demande de devis')
                 ->htmlTemplate('mail/ContactMail.html.twig')
                 ->context([

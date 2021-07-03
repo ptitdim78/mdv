@@ -135,7 +135,8 @@
                                          data-wow-duration="1s"
                                          data-wow-delay="800ms">
                                         <div class="team-member-image">
-                                            <img src="{{ '../images/DimitriB.jfif' }}" style="border-radius: 100%; padding: 5%" alt="Dimitri Bourlier"/>
+                                            <img src="{{ '../images/DimitriB.jfif' }}"
+                                                 style="border-radius: 100%; padding: 5%" alt="Dimitri Bourlier"/>
                                             <div class="team-overlay">
                                                 <div class="img-overlay"></div>
                                             </div>
@@ -163,7 +164,8 @@
                                     <div class="team-member-holder wow flipInY" data-wow-duration="1s"
                                          data-wow-delay="1100ms">
                                         <div class="team-member-image">
-                                            <img src="{{ '../images/sylvieM.png' }}" style="border-radius: 100%; padding: 5%" alt="Sylvie Mesmacque"/>
+                                            <img src="{{ '../images/sylvieM.png' }}"
+                                                 style="border-radius: 100%; padding: 5%" alt="Sylvie Mesmacque"/>
                                             <!-- Change Image -->
                                             <div class="team-overlay">
                                                 <div class="img-overlay"></div>
@@ -375,7 +377,8 @@
                                     <div class="item active">
                                         <div class="row">
                                             <div class="col-lg-12 col-sm-12">
-                                                <div id="pAvis" style="display: flex; justify-content: center;margin-inline: 8%;"
+                                                <div id="pAvis"
+                                                     style="display: flex; justify-content: center;margin-inline: 8%;"
                                                      class="testimonial-inner">
 
                                                 </div>
@@ -386,7 +389,8 @@
                                     <div class="item">
                                         <div class="row">
                                             <div class="col-lg-12 col-sm-12">
-                                                <div id="pAvis2" style="display: flex; justify-content: center; margin-inline: 8%;"
+                                                <div id="pAvis2"
+                                                     style="display: flex; justify-content: center; margin-inline: 8%;"
                                                      class="testimonial-inner"></div>
                                                 <section id="name2"></section>
                                             </div>
@@ -395,7 +399,8 @@
                                     <div class="item">
                                         <div class="row">
                                             <div class="col-lg-12 col-sm-12">
-                                                <div id="pAvis3" style="display: flex; justify-content: center; margin-inline: 8%;"
+                                                <div id="pAvis3"
+                                                     style="display: flex; justify-content: center; margin-inline: 8%;"
                                                      class="testimonial-inner">
 
                                                 </div>
@@ -423,23 +428,28 @@
                     <div class="container">
                         <div class="row element-title">
                             <h1 id="titreSection" class="main-color wow fadeInDown" data-wow-duration="1s"
-                                data-wow-delay="300ms">TITRE</h1>
+                                data-wow-delay="300ms">Nos vidéos</h1>
                         </div>
                     </div>
                     <div class="container">
                         <div class="wrapper-partners">
-                            <div class="col-lg-6 col-md-6 partners-img wow fadeInRight container-videos" data-wow-duration="1s" data-wow-delay="300ms">
+                            <div class="col-lg-6 col-md-6 partners-img wow fadeInRight container-videos"
+                                 data-wow-duration="1s" data-wow-delay="300ms">
                                 <div style="width: 100%" class="row productContainer">
-                                {% for videos in toutesLesVideos | slice(0, 3)%}
-                                    {% if videos.online == true %}
-                                            <div style="margin-bottom: 2%" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                <video style="border: solid 1px white; width: 100%" controls controlsList="nofullscreen nodownload noremoteplayback">
-                                                     <source src="{{ vich_uploader_asset(videos, 'videoFile') }}" type="video/mp4">
-                                                </video>
+                                    {% for videos in toutesLesVideos | slice(0, 3) %}
+                                        {% if videos.online == true %}
+                                            <div style="margin-bottom: 2%"
+                                                 class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                                    <video style="border: solid 1px white; width: 100%"
+                                                           controls
+                                                           controlsList="nofullscreen nodownload noremoteplayback">
+                                                        <source src="{{ vich_uploader_asset(videos, 'videoFile') }}"
+                                                                type="video/mp4">
+                                                    </video>
                                                 <h1 style="color: white; border-block: solid 1px white; text-align: center">{{ videos.title }}</h1>
                                             </div>
-                                    {% endif %}
-                                {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>

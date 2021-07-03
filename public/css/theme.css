@@ -1294,6 +1294,7 @@ span.price {
 
 .wrapper-block-clients{
 	padding: 40px 2% 60px;
+	min-height: 430px;
 }
 
 .clients h5 {

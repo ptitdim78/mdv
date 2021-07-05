@@ -328,6 +328,9 @@
 
 	/* Landscape phones and down */
 	@media (max-width: 480px) {
+		#testimonial{
+			min-height: 255px;
+		}
 		.sous-titre{
 			font-size: 20px!important;
 		}

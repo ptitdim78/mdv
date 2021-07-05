@@ -1,3 +1,8 @@
+
+.zoompartnairs:hover{
+	transform: scale(1.2);
+	z-index: 8000!important;
+}
 .container-videos{
 	display: flex;
 	width: 100%
@@ -24,6 +29,7 @@
 	transform: scale(1.4);
 	z-index: 8000!important;
 	position: absolute;
+	transition: 3s;
 }
 .captionGallery {
 	text-align: center;
@@ -954,7 +960,7 @@ cite {
 }
 
 .wrapper-block-skills{
-	padding: 60px 2% 10px;
+	padding: 60px 2% 60px;
 }
 
 
